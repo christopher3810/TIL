@@ -7,3 +7,6 @@ The articles are much shorter than those posted on a blog, but they serve as a s
 
 I stole this idea from the famous Git repository [jwworth/til](https://github.com/jwworth/til), [jbranchaud/til](https://github.com/jbranchaud/til/), [thoughtbot/til](https://github.com/thoughtbot/til) and developers who work hard every day for TIL.
 
+The TIL's starting readme was written in English as a tribute to [jwworth/til](https://github.com/jwworth/til) and the articles will be written in Korean
+
+
