@@ -39,5 +39,8 @@ SSL 인증서에는 다음 정보가 포함되어 있습니다:
 이 암호화된 연결을 통해 로그인 자격 증명, 지불 정보 및 기타 중요한 데이터와 같은 두 당사자 간에 전송되는 모든 정보가 무단 액세스로부터 보호됩니다.
 
 naver의 경우도 아래와 같이 url 왼쪽 자물쇠를 클릭하고 인증서에대한 정보를 얻을 수 있습니다.
-![](naver_인증서.png)
+
+![naver_인증서](https://user-images.githubusercontent.com/61622657/218092303-2c027c39-cb92-44e7-a38a-3382a3ff8730.png)
+![naver_인증서](https://user-images.githubusercontent.com/61622657/218092303-2c027c39-cb92-44e7-a38a-3382a3ff8730.png)
+
 
