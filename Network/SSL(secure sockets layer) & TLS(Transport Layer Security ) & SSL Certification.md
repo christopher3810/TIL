@@ -41,6 +41,6 @@ SSL 인증서에는 다음 정보가 포함되어 있습니다:
 naver의 경우도 아래와 같이 url 왼쪽 자물쇠를 클릭하고 인증서에대한 정보를 얻을 수 있습니다.
 
 ![naver_인증서](https://user-images.githubusercontent.com/61622657/218092303-2c027c39-cb92-44e7-a38a-3382a3ff8730.png)
-![naver_인증서](https://user-images.githubusercontent.com/61622657/218092303-2c027c39-cb92-44e7-a38a-3382a3ff8730.png)
+
 
 
