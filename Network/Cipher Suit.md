@@ -12,10 +12,10 @@
 
 **cipher suite는 암호화 알고리즘의 집합입니다.**
 TLS/SSL 프로토콜의 schannel SSP 구현은 **cipher suite**에서 알고리즘을 사용하여 키를 생성하고 정보를 암호화합니다.
-**cipher suite**는 다음과 같은 작업에 대해 각각 하나의 알고리즘을 지정합니다
-Key exchange  
-Bulk encryption  
-Message authentication
+**cipher suite**는 다음과 같은 작업에 대해 각각 하나의 알고리즘을 지정합니다.
+1. Key exchange  
+2. Bulk encryption  
+3. Message authentication
 
 ### Cipher suite의 구조
 *** 
