@@ -45,11 +45,11 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 
 ### Virtualization
 ***
-[가상화(Virtualization)와 가상화 종류](https://github.com/christopher3810/TIL/blob/master/Virtualization/%EA%B0%80%EC%83%81%ED%99%94(Virtualization)%EC%99%80%20%EA%B0%80%EC%83%81%ED%99%94%20%EC%A2%85%EB%A5%98.md)
-[전가상화(FullVirtualization)vs반가상화(ParaVirtualization)](https://github.com/christopher3810/TIL/blob/master/Virtualization/%EC%A0%84%EA%B0%80%EC%83%81%ED%99%94(FullVirtualization)vs%EB%B0%98%EA%B0%80%EC%83%81%ED%99%94(ParaVirtualization).md)
-[HostOS형 가상화](https://github.com/christopher3810/TIL/blob/master/Virtualization/HostOS%ED%98%95%20%EA%B0%80%EC%83%81%ED%99%94.md)
-[하이퍼바이저(Hypervisor)형 가상화](https://github.com/christopher3810/TIL/blob/master/Virtualization/%ED%95%98%EC%9D%B4%ED%8D%BC%EB%B0%94%EC%9D%B4%EC%A0%80(Hypervisor)%ED%98%95%20%EA%B0%80%EC%83%81%ED%99%94.md)
-[효율과 운용측면에서의 가상화의 장단점](https://github.com/christopher3810/TIL/blob/master/Virtualization/%ED%9A%A8%EC%9C%A8%EA%B3%BC%20%EC%9A%B4%EC%9A%A9%EC%B8%A1%EB%A9%B4%EC%97%90%EC%84%9C%EC%9D%98%20%EA%B0%80%EC%83%81%ED%99%94%EC%9D%98%20%EC%9E%A5%EB%8B%A8%EC%A0%90.md)
+[가상화(Virtualization)와 가상화 종류](https://github.com/christopher3810/TIL/blob/master/Virtualization/%EA%B0%80%EC%83%81%ED%99%94(Virtualization)%EC%99%80%20%EA%B0%80%EC%83%81%ED%99%94%20%EC%A2%85%EB%A5%98.md)\
+[전가상화(FullVirtualization)vs반가상화(ParaVirtualization)](https://github.com/christopher3810/TIL/blob/master/Virtualization/%EC%A0%84%EA%B0%80%EC%83%81%ED%99%94(FullVirtualization)vs%EB%B0%98%EA%B0%80%EC%83%81%ED%99%94(ParaVirtualization).md)\
+[HostOS형 가상화](https://github.com/christopher3810/TIL/blob/master/Virtualization/HostOS%ED%98%95%20%EA%B0%80%EC%83%81%ED%99%94.md)\
+[하이퍼바이저(Hypervisor)형 가상화](https://github.com/christopher3810/TIL/blob/master/Virtualization/%ED%95%98%EC%9D%B4%ED%8D%BC%EB%B0%94%EC%9D%B4%EC%A0%80(Hypervisor)%ED%98%95%20%EA%B0%80%EC%83%81%ED%99%94.md)\
+[효율과 운용측면에서의 가상화의 장단점](https://github.com/christopher3810/TIL/blob/master/Virtualization/%ED%9A%A8%EC%9C%A8%EA%B3%BC%20%EC%9A%B4%EC%9A%A9%EC%B8%A1%EB%A9%B4%EC%97%90%EC%84%9C%EC%9D%98%20%EA%B0%80%EC%83%81%ED%99%94%EC%9D%98%20%EC%9E%A5%EB%8B%A8%EC%A0%90.md)\
 
 <br>
 
