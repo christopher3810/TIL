@@ -198,4 +198,4 @@ WHERE (이름, 전공코드) IN // 서브쿼리 SELECT 이름, 전공코드 FROM
 ***
 [aws-redshift](https://docs.aws.amazon.com/redshift/latest/dg/r_scalar_subqueries.html)\
 [oracle](https://docs.oracle.com/cd/E28280_01/bi.1111/e10544/appsql.htm#BIEUG14135)\
-[업무에 바로 쓰는 SQL 튜닝](http://www.yes24.com/Product/Goods/102382080)\
+[업무에 바로 쓰는 SQL 튜닝](http://www.yes24.com/Product/Goods/102382080)
