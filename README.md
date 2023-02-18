@@ -38,7 +38,7 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 
 ### Database
 ***
-[서브 쿼리 위치에 따른 SQL 용어](https://github.com/christopher3810/TIL/blob/master/Database/%EC%84%9C%EB%B8%8C%20%EC%BF%BC%EB%A6%AC%20%EC%9C%84%EC%B9%98%EC%97%90%20%EB%94%B0%EB%A5%B8%20SQL%20%EC%9A%A9%EC%96%B4.md)
+[SQL 개념 용어](https://github.com/christopher3810/TIL/blob/master/Database/SQL%20%EA%B0%9C%EB%85%90%20%EC%9A%A9%EC%96%B4.md)
 
 
 <br>
