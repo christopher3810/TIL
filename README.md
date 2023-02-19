@@ -39,7 +39,7 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 ### Database
 ***
 [SQL 개념 용어](https://github.com/christopher3810/TIL/blob/master/Database/SQL%20%EA%B0%9C%EB%85%90%20%EC%9A%A9%EC%96%B4.md)
-
+[선택도와 카디널리티](https://github.com/christopher3810/TIL/blob/master/Database/%EC%84%A0%ED%83%9D%EB%8F%84%EC%99%80%20%EC%B9%B4%EB%94%94%EB%84%90%EB%A6%AC%ED%8B%B0.md)
 
 <br>
 
