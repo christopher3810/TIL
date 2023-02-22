@@ -2,10 +2,10 @@
 코드 예시
 ```java
 public class Student { 
-private String name; 
-private int year; 
-private List<Integer> marks; 
-private Profile profile; 
+	private String name; 
+	private int year; 
+	private List<Integer> marks; 
+	private Profile profile; 
 // constructor getters and setters 
 }
 ```
@@ -14,31 +14,37 @@ private Profile profile;
 다중 Filter
 ```java
 @Test public void whenUsingMultipleFilters_dataShouldBeFiltered() { 
-List<Student> filteredStream = students.stream() 
-	.filter(s -> s.getMarksAverage() > 50) 
-	.filter(s -> s.getMarks().size() > 3) 
-	.filter(not(s -> s.getProfile() == Student.Profile.PHYSICS)) .collect(Collectors.toList()); assertThat(filteredStream).containsExactly(mathStudent); }
+	List<Student> filteredStream = students.stream() 
+		.filter(s -> s.getMarksAverage() > 50) 
+		.filter(s -> s.getMarks().size() > 3) 
+		.filter(not(s -> s.getProfile() == Student.Profile.PHYSICS)) 
+		.collect(Collectors.toList()); 
+	assertThat(filteredStream).containsExactly(mathStudent); 
+	}
 ```
 
 복잡한 단일 FIlter
 ```java
 @Test public void whenUsingSingleComplexFilter_dataShouldBeFiltered() { 
-List<Student> filteredStream = students.stream() 
-	.filter(s -> s.getMarksAverage() > 50 && s.getMarks().size() > 3 
-	&& s.getProfile() != Student.Profile.PHYSICS) .collect(Collectors.toList()); assertThat(filteredStream).containsExactly(mathStudent); }
+	List<Student> filteredStream = students.stream() 
+		.filter(s -> s.getMarksAverage() > 50 && s.getMarks().size() > 3 
+		&& s.getProfile() != Student.Profile.PHYSICS) .collect(Collectors.toList()); 
+	assertThat(filteredStream).containsExactly(mathStudent); }
 ```
 
 가독성이 떨어지면 별도의 메서드를 활용
 ```java
 public boolean isEligibleForScholarship() { 
-return getMarksAverage() > 50 && marks.size() > 3 
-		&& profile != Profile.PHYSICS; }
+	return getMarksAverage() > 50 && marks.size() > 3 
+			&& profile != Profile.PHYSICS; }
 ```
 
 ```Java
-@Test public void whenUsingSingleComplexFilterExtracted_dataShouldBeFiltered() { List<Student> filteredStream = students.stream() .filter(Student::isEligibleForScholarship) 
-.collect(Collectors.toList()); 
-assertThat(filteredStream).containsExactly(mathStudent); }
+@Test public void whenUsingSingleComplexFilterExtracted_dataShouldBeFiltered() {
+	List<Student> filteredStream = students.stream() 
+		.filter(Student::isEligibleForScholarship) 
+		.collect(Collectors.toList()); 
+	assertThat(filteredStream).containsExactly(mathStudent); }
 ```
 
 
@@ -58,7 +64,14 @@ Filter도 결국 Boolean을 반환하는 Predicate 이기 때문에 다중 필�
 
 100개의 정수 Stream이 있고 20보다 작은 짝수를 찾는다고 가정한다면
 ```java
-@Test public void givenWrongFilterOrder_whenUsingMultipleFilters_shouldEvaluateManyConditions() { long filteredStreamSize = IntStream.range(0, 100).boxed() .filter(this::isEvenNumber) .filter(this::isSmallerThanTwenty) .count(); assertThat(filteredStreamSize).isEqualTo(10); assertThat(numberOfOperations).hasValue(150); }
+@Test public void givenWrongFilterOrder_whenUsingMultipleFilters_shouldEvaluateManyConditions() { 
+	long filteredStreamSize = IntStream.range(0, 100).boxed() 
+		.filter(this::isEvenNumber) 
+		.filter(this::isSmallerThanTwenty) 
+		.count(); 
+	assertThat(filteredStreamSize).isEqualTo(10);
+	assertThat(numberOfOperations).hasValue(150); 
+	}
 ```
 
 -   첫번째 filter에서 100개를 확인하고 이후 filter에서 50번을 확인합니다 - 150번
