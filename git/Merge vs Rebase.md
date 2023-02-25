@@ -3,8 +3,8 @@
 
 <br>
 
-전제
-Main 브랜치에서 feature 브랜치가 분기되고 3번의 commit이 이루어져 있고
+전제\
+Main 브랜치에서 feature 브랜치가 분기되고 3번의 commit이 이루어져 있고\
 Main 브랜치 역시 feature 브랜치가 분기되고 난뒤 2번의 commit이 이루어졌다.
 
 
