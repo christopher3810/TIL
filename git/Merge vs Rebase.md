@@ -62,7 +62,9 @@ git rebase feature
 출처 : https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 
 main으로 checkout  한뒤 rebase 를 feature로 잡는경우에는 main의 이력이 변경하게 됩니다.\
-main 브랜치가 master인경우 이경우는 피하는게 좋습니다.
+main 브랜치가 다른 개발자들과 공유하는 master 브랜치인 경우 rebase를 한 지금 나의 master 형상과 다른 개발자들의 master 형상이 틀어지게 되며 두 형상의 sync를 맞추기 위해서는 merge를 다시해야 하는 상황이 생깁니다.\
+브랜치 history도 변경이 됩니다.\
+rebase를 하기전에 해당 브랜치가 다른 개발자들과 공유를 하고있는지 확인하고 특히 main 브랜치가 master인경우 rebase를 절대 진행해서는 안됩니다.
 
 <br>
 
