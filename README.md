@@ -50,9 +50,15 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 [Driving Table Driven Table](https://github.com/christopher3810/TIL/blob/master/Database/Driving%20Table%20Driven%20Table.md)
 <br>
 
+### Postgres
+[Copy Query 를 활용한 DBFile csv file로 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Copy%20Query%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20DBFile%20csv%20file%EB%A1%9C%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md)
+
+<br>
+
 ### Redis
 
 [Redis Collections](https://github.com/christopher3810/TIL/blob/master/Database/Redis/Redis%20Collections.md)
+
 
 <br>
 
