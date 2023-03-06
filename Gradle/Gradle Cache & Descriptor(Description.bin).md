@@ -38,5 +38,5 @@ description.bin 파일을 사용하여 캐시된 dependency의 무결성을 확�
 
 
 ### 참조
-https://docs.gradle.org/current/userguide/directory_layout.html
+https://docs.gradle.org/current/userguide/directory_layout.html \
 https://docs.gradle.org/current/userguide/working_with_files.html
