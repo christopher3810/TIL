@@ -62,6 +62,6 @@ public class AfterStop {
 
 
 ### 참조
-https://www.baeldung.com/java-volatile
-https://www.javatpoint.com/volatile-keyword-in-java
+https://www.baeldung.com/java-volatile \
+https://www.javatpoint.com/volatile-keyword-in-java \
 https://www.geeksforgeeks.org/volatile-keyword-in-java/
