@@ -6,7 +6,8 @@
 트랜잭션이 존재하지 않으면 예외가 발생함.
 
 ```java
-@Transactional(propagation = Propagation.MANDATORY) public void mandatoryExample(String user) { // ... }
+@Transactional(propagation = Propagation.MANDATORY)
+public void mandatoryExample(String user) { // ... }
 ```
 
 ### Flow
@@ -31,7 +32,8 @@ ThrowIllegalTransactionStateException --> End
 트랜잭션이 존재하면 예외가 발생함.
 
 ```java
-@Transactional(propagation = Propagation.NEVER) public void neverExample(String user) { // ... }
+@Transactional(propagation = Propagation.NEVER)
+public void neverExample(String user) { // ... }
 ```
 
 
@@ -55,7 +57,8 @@ emptyTransaction --> End
 트랜잭션이 존재하지 않으면 새 트랜잭션이 생성됨.
 
 ```java
-@Transactional(propagation = Propagation.NESTED) public void nestedExample(String user) { // ... }
+@Transactional(propagation = Propagation.NESTED)
+public void nestedExample(String user) { // ... }
 ```
 
 

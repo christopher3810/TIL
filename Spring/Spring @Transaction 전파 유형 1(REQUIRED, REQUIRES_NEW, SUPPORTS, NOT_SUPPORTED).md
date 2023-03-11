@@ -12,13 +12,14 @@ propagation type은 여러 트랜잭션이 관련된 경우 트랜잭션이 전�
 트랜잭션이 존재하지 않으면 메서드에 대한 새 트랜잭션이 생성.
 
 ```java
-@Transactional(propagation = Propagation.REQUIRED) public void requiredExample(String user) { // ... }
+@Transactional(propagation = Propagation.REQUIRED) 
+public void requiredExample(String user) { // ... }
 ```
 
 REQUIRED는 Default 이므로 생략이 가능.
 
 ```java
-@Transactional(propagation ) 
+@Transactional(propagation )
 public void requiredExample(String user) { // ... }
 ```
 
@@ -46,7 +47,8 @@ CreateNewTransaction --> End
 트랜잭션이 이미 존재하는 경우 새 트랜잭션이 완료될 때까지 일시 중단.
 
 ```java
-@Transactional(propagation = Propagation.REQUIRES_NEW) public void requiresNewExample(String user) { // ... }
+@Transactional(propagation = Propagation.REQUIRES_NEW)
+public void requiresNewExample(String user) { // ... }
 ```
 
 ### Flow
@@ -70,7 +72,8 @@ isExistingTransaction -- False --> CreateNewTransaction
 트랜잭션이 존재하지 않으면 트랜잭션 없이 메서드가 실행.
 
 ```java
-@Transactional(propagation = Propagation.SUPPORTS) public void supportsExample(String user) { // ... }
+@Transactional(propagation = Propagation.SUPPORTS)
+public void supportsExample(String user) { // ... }
 ```
 
 ### Flow
@@ -95,7 +98,8 @@ emptyTransaction --> End
 트랜잭션이 존재하면 현재 메서드가 실행되는 동안 트랜잭션이 일시 중단됨.
 
 ```java
-@Transactional(propagation = Propagation.NOT_SUPPORTED) public void notSupportedExample(String user) { // ... }
+@Transactional(propagation = Propagation.NOT_SUPPORTED)
+public void notSupportedExample(String user) { // ... }
 ```
 
 
