@@ -19,7 +19,7 @@ public void requiredExample(String user) { // ... }
 REQUIRED는 Default 이므로 생략이 가능.
 
 ```java
-@Transactional(propagation )
+@Transactional
 public void requiredExample(String user) { // ... }
 ```
 
