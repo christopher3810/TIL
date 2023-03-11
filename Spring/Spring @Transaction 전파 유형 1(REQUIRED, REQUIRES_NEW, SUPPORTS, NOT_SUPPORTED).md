@@ -102,6 +102,6 @@ emptyTransaction --> End
 
 
 ### 참조
-https://www.baeldung.com/spring-transactional-propagation-isolation
-https://stackoverflow.com/questions/8490852/spring-transactional-isolation-propagation
+https://www.baeldung.com/spring-transactional-propagation-isolation \
+https://stackoverflow.com/questions/8490852/spring-transactional-isolation-propagation \
 https://dzone.com/articles/spring-transaction-propagation
