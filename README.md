@@ -20,15 +20,7 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 아이디어는 유명한 Git 저장소 [jwworth/til](https://github.com/jwworth/til), [jbranchaud/til](https://github.com/jbranchaud/til/), [thoughtbot/til](https://github.com/thoughtbot/til) 그리고 TIL을 위해 매일 힘을 쓰는 개발자들에게서 훔쳐왔습니다.
 
 <br>
-<br>
-
-## Network
-
-[SSL(secure sockets layer) & TLS(Transport Layer Security ) & SSL Certification](https://github.com/christopher3810/TIL/blob/master/Network/SSL(secure%20sockets%20layer)%20%26%20TLS(Transport%20Layer%20Security%20)%20%26%20SSL%20Certification.md)\
-[CipherSuit](https://github.com/christopher3810/TIL/blob/master/Network/Cipher%20Suit.md)\
-[Http Status Code](https://github.com/christopher3810/TIL/blob/master/Network/Http%20Status%20Code.md) \
-[SDN](https://github.com/christopher3810/TIL/blob/master/Network/SDN.md)
-
+***
 <br>
 
 ## Spring
@@ -62,6 +54,22 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 ### Redis
 
 [Redis Collections](https://github.com/christopher3810/TIL/blob/master/Database/Redis/Redis%20Collections.md)
+
+
+<br>
+## AWS
+
+[VPC 환경 및 구축 그리고 InternetGateway & NatGateway](https://github.com/christopher3810/TIL/blob/master/AWS/VPC%20%ED%99%98%EA%B2%BD%20%EB%B0%8F%20%EA%B5%AC%EC%B6%95%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20InternetGateway%20%26%20NatGateway.md)
+
+<br>
+
+## Network
+
+[SSL(secure sockets layer) & TLS(Transport Layer Security ) & SSL Certification](https://github.com/christopher3810/TIL/blob/master/Network/SSL(secure%20sockets%20layer)%20%26%20TLS(Transport%20Layer%20Security%20)%20%26%20SSL%20Certification.md)\
+[CipherSuit](https://github.com/christopher3810/TIL/blob/master/Network/Cipher%20Suit.md)\
+[Http Status Code](https://github.com/christopher3810/TIL/blob/master/Network/Http%20Status%20Code.md) \
+[SDN](https://github.com/christopher3810/TIL/blob/master/Network/SDN.md)
+
 
 
 <br>
