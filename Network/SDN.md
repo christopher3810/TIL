@@ -4,7 +4,8 @@
 
 Software-Defined Networking (SDN)은 API로 구동할 수 있는 소프트웨어 컨트롤러를 사용하여 하드웨어 인프라와 통신하여 네트워크 트래픽을 전달하는 네트워킹 접근 방식. 
 
-![sdn](https://user-images.githubusercontent.com/61622657/224517757-1dcc4bd9-7ef2-433b-a500-1f1e10aba85d.png)
+![sdn](https://user-images.githubusercontent.com/61622657/224517757-1dcc4bd9-7ef2-433b-a500-1f1e10aba85d.png) 
+
 출처 : https://news.sktelecom.com/98995
 
 전용 하드웨어 장치(예: 라우터 및 스위치)를 사용하여 네트워크 트래픽을 제어하는 기존 네트워크와는 다름
@@ -18,6 +19,7 @@ Software-Defined Networking (SDN)은 API로 구동할 수 있는 소프트웨어
 ## 작동 방식
 
 ![sdn_arch](https://user-images.githubusercontent.com/61622657/224517810-c8836573-89c0-41f8-b892-74e72794cd00.png)
+
 출처 : Unveil the Myths About SDN Switch FS Community
 
 - 애플리케이션 - 네트워크에 대한 정보를 전달하거나 특정 리소스 가용성 또는 할당에 대한 요청을 처리
@@ -29,7 +31,7 @@ Software-Defined Networking (SDN)은 API로 구동할 수 있는 소프트웨어
 
 - 네트워킹 장치 - 패킷 라우팅 방법에 관한 컨트롤러의 지시를 받음.
 
-- Open-source technologies  - OpenFlow와 같은 프로그래밍 가능한 네트워킹 프로토콜은 SDN 네트워크의 네트워크 디바이스 간에 트래픽을 전달합니다. \
+- Open-source technologies  - OpenFlow와 같은 프로그래밍 가능한 네트워킹 프로토콜은 SDN 네트워크의 네트워크 디바이스 간에 트래픽을 전달합니다. 
 
 
 이러한 구성 요소를 결합함으로써 네트워크를 보다 단순하고 중앙 집중화된 방식으로 관리할 수 있습니다. 
