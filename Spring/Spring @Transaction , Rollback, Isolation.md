@@ -46,6 +46,8 @@ public class TestService {
 annotation은 추가적인 설정도 역시 지원함.
 
 1. 트랜잭션의 전파 유형
+	1. [Spring @Transaction 전파 유형 1(REQUIRED, REQUIRES_NEW, SUPPORTS, NOT_SUPPORTED)](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20%40Transaction%20%EC%A0%84%ED%8C%8C%20%EC%9C%A0%ED%98%95%201(REQUIRED%2C%20REQUIRES_NEW%2C%20SUPPORTS%2C%20NOT_SUPPORTED).md)\
+	2. [Spring @Transaction 전파 유형 2(MANDATORY, NEVER,NESTED)](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20%40Transaction%20%EC%A0%84%ED%8C%8C%20%EC%9C%A0%ED%98%95%202(MANDATORY%2C%20NEVER%2CNESTED).md)
 2. 트랜잭션의 격리 수준
 3. 트랜잭션에 의해 래핑된 연산에 대한 시간 제한
 4. readOnly flag - 트랜잭션이 readOnly여야 한다는 persistence provider 에게 hint 제공
