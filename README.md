@@ -111,3 +111,9 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 
 [Merge와 Rebase의 차이점](https://github.com/christopher3810/TIL/blob/master/git/Merge%20vs%20Rebase.md)\
 [git reflog를 활용한 commit 복구](https://github.com/christopher3810/TIL/blob/master/git/git%20reflog%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20commit%20%EB%B3%B5%EA%B5%AC.md)
+
+<br>
+
+### Etc
+
+[GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md)
