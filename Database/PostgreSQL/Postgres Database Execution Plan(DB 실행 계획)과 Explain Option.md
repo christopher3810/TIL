@@ -2,7 +2,7 @@
 
 데이터베이스 실행 계획(Database Execution Plan) 또는 쿼리 실행 계획(Query Execution Plan)은 가능한 가장 효율적인 방법으로 데이터를 검색하거나 조작하기 위해 database management system's (DBMS) query optimizer에서 생성하는 일련의 단계임.
 
-Database 실행계획을 Postgresql의 관점으로 확. \
+Database 실행계획을 Postgresql의 관점으로 확인. \
 PostgreSQL의 맥락에서 실행 계획은 쿼리 처리 파이프라인의 중요한 구성 요소로, 시스템이 쿼리를 빠르고 효율적으로 수행할 수 있도록 도와줌.
 
 PostgreSQL 쿼리 실행 프로세스는 여러 단계로 구성됨.
@@ -18,7 +18,7 @@ PostgreSQL 재작성기는 구문 분석 트리를 처리하고 테이블에 대
 쿼리 최적화 도구라고도 하는 PostgreSQL 플래너는 구문 분석 트리의 정보와 데이터베이스의 테이블 및 인덱스에 대한 통계를 기반으로 다양한 실행 전략을 평가함. \
 목표는 쿼리를 실행하는 가장 효율적인 방법을 찾는 것.
 
-`Execution`
+`Execution` \
 PostgreSQL 실행기는 선택한 계획을 실행하여 필요에 따라 데이터를 가져오고 조작함.
 
 PostgreSQL의 쿼리 실행 계획은 plan node라는 노드 트리로 표시됨. \
