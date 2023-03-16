@@ -97,33 +97,25 @@ LIMIT 10;
 출력 결과
 
 ```bash
-For example:
-=> EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM some_view WHERE nspname not in ('pg_catalog', 'information_schema') order by 1, 2, 3;
-                                                        QUERY PLAN
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- Sort  (cost=291.79..293.15 rows=544 width=224) (actual time=60.754..60.760 rows=69 loops=1)
-   Sort Key: n.nspname, p.proname, (pg_get_function_arguments(p.oid))
-   Sort Method: quicksort  Memory: 38kB
-   Buffers: shared hit=97
-   ->  Hash Join  (cost=1.08..223.93 rows=544 width=224) (actual time=11.679..60.696 rows=69 loops=1)
-         Hash Cond: (p.pronamespace = n.oid)
-         Buffers: shared hit=97
-         ->  Seq Scan on pg_proc p  (cost=0.00..210.17 rows=1087 width=73) (actual time=0.067..59.669 rows=3320 loops=1)
-               Filter: pg_function_is_visible(oid)
-               Rows Removed by Filter: 12
-               Buffers: shared hit=96
-         ->  Hash  (cost=1.06..1.06 rows=2 width=68) (actual time=0.011..0.011 rows=2 loops=1)
-               Buckets: 1024  Batches: 1  Memory Usage: 9kB
-               Buffers: shared hit=1
-               ->  Seq Scan on pg_namespace n  (cost=0.00..1.06 rows=2 width=68) (actual time=0.004..0.006 rows=2 loops=1)
-                     Filter: ((nspname <> 'pg_catalog'::name) AND (nspname <> 'information_schema'::name))
-                     Rows Removed by Filter: 2
-                     Buffers: shared hit=1
- Planning:
-   Buffers: shared hit=4
- Planning Time: 0.288 ms
- Execution Time: 60.802 ms
-(22 rows)
+postgres=# EXPLAIN
+SELECT a.id, a.name, b.total_sales
+FROM customers a
+JOIN sales b ON a.id = b.customer_id
+WHERE a.active = true
+ORDER BY b.total_sales DESC
+LIMIT 10;
+                                      QUERY PLAN                                       
+---------------------------------------------------------------------------------------
+ Limit  (cost=50.46..50.48 rows=10 width=552)
+   ->  Sort  (cost=50.46..51.96 rows=600 width=552)
+         Sort Key: b.total_sales DESC
+         ->  Hash Join  (cost=12.28..37.49 rows=600 width=552)
+               Hash Cond: (b.customer_id = a.id)
+               ->  Seq Scan on sales b  (cost=0.00..22.00 rows=1200 width=36)
+               ->  Hash  (cost=11.40..11.40 rows=70 width=520)
+                     ->  Seq Scan on customers a  (cost=0.00..11.40 rows=70 width=520)
+                           Filter: active
+(9 rows)
 ```
 
 쿼리를 실행하고 실제 실행 통계를 제공하는 EXPLAIN ANALYZE를 사용할 수도 있음.
