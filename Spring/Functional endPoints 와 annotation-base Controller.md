@@ -31,7 +31,7 @@ annotations 을 활용해서 매핑하는것과 달리 HandlerFunction and Route
 
 일반적으로 완전한 라우터 함수를 작성하는 대신 도우미 함수 RouterFunctions.route()를 임포트하여 경로를 생성할 수 있음.
 
-이 함수를 사용하면 RequestPredicate를 적용하여 요청을 라우팅할 수 있음니다.  \
+이 함수를 사용하면 RequestPredicate를 적용하여 요청을 라우팅할 수 있음. \
 predicate가 일치하면 두 번째 인수인 핸들러 함수가 반환됨. \
 즉 RouterFunction은 요청이 특정 경로와 일치할 때 실행할 경로, 관련 HTTP 메서드, 핸들러 함수를 정의하는 역할을 담당함,
 
@@ -61,7 +61,7 @@ public interface HandlerFunction<T extends ServerResponse> {
 ### Functional EndPoint
 
 `functional endpoint` 는 함수형 프로그래밍 스타일을 사용하여 HTTP request-response interactions을 정의하고 처리하는 접근 방식임.  \
-`A functional endpoint`는 라우터 및 핸들러 함수를 사용하여 구축되며, 라우터 및 해당 요청 핸들러를 보다 명시적이고 유연하게 정의할 수 있는 방법을 제공함.\
+`A functional endpoint`는 라우터 및 핸들러 함수를 사용하여 구축되며, 라우터 및 해당 요청 핸들러를 보다 명시적이고 유연하게 정의할 수 있는 방법을 제공함.
 
 함수형 프로그래밍 스타일을 사용하며 라우터 및 핸들러 함수를 기반으로 함  \
 메서드 체인 및 람다 표현식을 사용하여 라우터와 해당 핸들러를 정의할 수 있음.
