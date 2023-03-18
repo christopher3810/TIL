@@ -48,7 +48,7 @@ TIL을 기록하기 위해 만든 Git Repository 입니다.\
 [선택도와 카디널리티](https://github.com/christopher3810/TIL/blob/master/Database/%EC%84%A0%ED%83%9D%EB%8F%84%EC%99%80%20%EC%B9%B4%EB%94%94%EB%84%90%EB%A6%AC%ED%8B%B0.md)\
 [Database Join](https://github.com/christopher3810/TIL/blob/master/Database/Database%20Join.md)\
 [Driving Table Driven Table](https://github.com/christopher3810/TIL/blob/master/Database/Driving%20Table%20Driven%20Table.md)\
-[중첩 루프 조인 & 블록 중첩 루프 조인]https://github.com/christopher3810/TIL/blob/master/Database/%EC%A4%91%EC%B2%A9%20%EB%A3%A8%ED%94%84%20%EC%A1%B0%EC%9D%B8%20%26%20%EB%B8%94%EB%A1%9D%20%EC%A4%91%EC%B2%A9%20%EB%A3%A8%ED%94%84%20%EC%A1%B0%EC%9D%B8.md)
+[중첩 루프 조인 & 블록 중첩 루프 조인](https://github.com/christopher3810/TIL/blob/master/Database/%EC%A4%91%EC%B2%A9%20%EB%A3%A8%ED%94%84%20%EC%A1%B0%EC%9D%B8%20%26%20%EB%B8%94%EB%A1%9D%20%EC%A4%91%EC%B2%A9%20%EB%A3%A8%ED%94%84%20%EC%A1%B0%EC%9D%B8.md)
 
 
 <br>
