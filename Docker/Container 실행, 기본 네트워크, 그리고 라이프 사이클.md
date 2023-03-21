@@ -9,21 +9,22 @@ docker는 linux 와 kernel을 공유하면서 guest os가없이 가볍게 동작
 
 추후에 linux쪽에서 아래 커널에 대해서 자세하게 작성후 링크. 
 
-`Linux namespaces`
+`Linux namespaces`\
 프로세스 격리를 제공하여 컨테이너가 별도의 프로세스 트리, 네트워크 인터페이스, 사용자 ID 및 파일 시스템을 갖도록 함.
 
-`Control groups (cgroups)`
+`Control groups (cgroups)`\
 리소스 할당을 관리하여 컨테이너가 CPU, 메모리, I/O에 대한 자체 제한과 할당량을 갖도록 함.
 
-`UnionFS file systems`
+`UnionFS file systems`\
 컨테이너 레이어를 서로 겹쳐서 쌓을 수 있도록 허용하여 각 컨테이너에 대해 격리된 파일 시스템 보기를 제공.
 
 ### Default Network And Docker0
 
-기본적으로 컨테이너가 시작되면 "bridge"라는 네트워크에 연결됨. \ 
+기본적으로 컨테이너가 시작되면 "bridge"라는 네트워크에 연결됨.\
 이 네트워크는 Docker에서 생성하는 기본 네트워크 유형으로, 컨테이너와 호스트 시스템 간에 트래픽을 라우팅하는 가상 네트워크임.
 
 ![docker0](https://user-images.githubusercontent.com/61622657/226511018-31a2d495-108d-49a6-915d-ad340d4e9091.png)
+
 출처:https://stackoverflow.com/questions/37536687/what-is-the-relation-between-docker0-and-eth0
 
 기본 브리지 네트워크가 설정되는 방법은 다음과 같음.
