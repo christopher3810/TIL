@@ -20,7 +20,7 @@
     3.  유일한 단일 객체를 참조할 정적 참조 변수가 필요하다.
 
 
-	```java
+```java
 public class App {
 
 	public static void main(String[] args) {
@@ -53,7 +53,7 @@ public class Settings {
 	}
 	
 }
-	```
+```
 
 ## 멀티 쓰레드 환경에서 쓰레드 언세이프?
 
