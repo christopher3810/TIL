@@ -2,7 +2,7 @@
 
 >Of course, people will do what they want. But we did have a clear intention when adding this feature, and it was **not to be a general purpose Maybe type**, as much as many people would have liked us to do so. **Our intention was to provide a limited mechanism for library method return types where there needed to be a clear way to represent "no result"**, and using null for such was overwhelmingly likely to cause errors.
 >
->- stackoverflow Brian Goetz -
+>stackoverflow Brian Goetz
 >
 >물론 사람들은 자신이 원하는 대로 할 것입니다. 
 >하지만 이 기능을 추가할 때 저희는 분명한 의도를 가지고 있었고, 많은 사람이 원하는 것처럼 **범용적인 Maybe 타입을 만들려고 한 것은 아니었습니다**.
@@ -28,6 +28,8 @@
 
 >I think routinely using it as a return value for getters would definitely be over-use.
 >일상적으로 게터의 반환값으로 사용하는 것은 분명 남용이라고 생각합니다.
+
+<br>
 
 ### DTO Field 에서의 Optional을 사용하는 경우
 
@@ -57,22 +59,28 @@ public class UserRepository {
 
 ```
 
-DTO Field에서 Optional 을 사용했을때 발생하는 단점들에 대해서 확인해보자
+<br>
+
+### DTO Field에서 Optional 을 사용했을때 발생하는 단점들에 대해서 확인해보자
 
 `직렬화 문제(Serialization issues)`
+
 Optional 클래스는 Java에서 null 값을 다룰 때 사용되는 클래스입니다. 하지만 Optional 클래스는 Serializable 인터페이스를 구현하고 있지 않음.
 따라서 Jackson과 같은 많은 직렬화 라이브러리는 Optional 클래스를 제대로 처리하지 못함.
 라이브러리를 올바르게 처리하도록 구성하거나 사용자 정의 직렬화/역직렬화기를 작성해야 할 수 있음.
 
-`메모리 사용량 증가` 
+`메모리 사용량 증가`
+
 Optional은 실제 값 주위에 래퍼 객체를 추가하여 메모리 사용량을 증가시킨다.
 즉 Optional을 사용하는 것 자체가 기본적으로 드는 비용이 존재한다.
 DTO 인스턴스 수가 많은 경우 이 오버헤드가 상당할 수 있음.
 
 `코드 복잡도 증가`
+
 DTO에서 옵션을 사용하면 사용할 때마다 옵션 값을 래핑 해제해야 하므로 코드가 더 장황해질 수 있음.
 
 `over-use`
+
 DTO에서 필드 유형으로 옵션을 사용하면 개발자가 간단한 null 확인으로 충분할 경우에도 모든 곳에서 이 Optional을 사용하도록 강제할 수 있음  \
 이는 over-use으로 이어져 코드를 필요 이상으로 복잡하게 만들 수 있음.
 
