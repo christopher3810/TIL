@@ -2,7 +2,7 @@
 자바 라이브러리에는 close 메서드를 호출해 직접 닫아줘야 하는 자원이 많다. \
 `InputStream`, `OutputStream`, `java.sql.Connection` 등이 좋은 예시이다. \
 Java 7에서는 파일 스트림, 소켓 및 데이터베이스 연결과 같은 리소스의 자동 관리를 위해 `try-with-resources` 문을 도입했다. \
-예외가 발생한 경우에도 리소스가 올바르게 닫히도록 보장하는 데 도움이 된다. \
+예외가 발생한 경우에도 리소스가 올바르게 닫히도록 보장하는 데 도움이 된다.
 
 ### 전통적인 자원을 닫는 수단 `try-finally`
 
@@ -17,7 +17,11 @@ static String firstLineOfFile(String path) throws IOException {
  }
 ```
 
+<br>
+
 그다지 나쁘지 않다 하지만 자원을 하나 더 사용하게 되는 경우에는?
+
+<br>
 
 ```java
 static void copy(String src, String dst) throws IOException {
@@ -38,17 +42,21 @@ static void copy(String src, String dst) throws IOException {
 }
 ```
 
+<br>
 
-try-finally 구문을 제대로 사용한 코드에도 결점이 있을 수 있다. \ 
-이는 try 블록과 finally 블록에서 모두 예외가 발생할 수 있다는 것 때문. \ 
-예를 들어, 파일에서 첫 번째 라인을 읽는 firstLineOfFile 메서드에서 readLine 메서드가 예외를 던지고, close 메서드도 같은 이유로 실패한다면 두 번째 예외가 첫 번째 예외를 완전히 덮어버리게 된다.\ 
-그 결과, 첫 번째 예외와 관련된 정보가 스택 추적 내역에서 사라져 실제 디버깅이 어려워집니다. \
-이 문제를 해결하려면 두 번째 예외 대신 첫 번째 예외를 기록하도록 코드를 수정해야 합니다. \
-그러나 이렇게 하면 코드가 복잡해져 가독성이 떨어집니다.
+try-finally 구문을 제대로 사용한 코드에도 결점이 있을 수 있다.
+
+이는 try 블록과 finally 블록에서 모두 예외가 발생할 수 있다는 것 때문.
+
+예를 들어, 파일에서 첫 번째 라인을 읽는 firstLineOfFile 메서드에서 readLine 메서드가 예외를 던지고, close 메서드도 같은 이유로 실패한다면 두 번째 예외가 첫 번째 예외를 완전히 덮어버리게 된다.
+
+그 결과, 첫 번째 예외와 관련된 정보가 스택 추적 내역에서 사라져 실제 디버깅이 어려워진다.
+
+이 문제를 해결하려면 두 번째 예외 대신 첫 번째 예외를 기록하도록 코드를 수정해야 하고  이렇게 하면 코드가 복잡해져 가독성이 떨어지게 된다.
 
 ### Try-with Resource 사용하기
 
-Try-with Resource를 사용하려면 `AutoCloseable`이 구현하거나 `extend` 되어야 합니다.
+Try-with Resource를 사용하려면 `AutoCloseable`이 구현하거나 `extend` 되어야 함.
 
 ```java
 public interface AutoCloseable {  
@@ -57,9 +65,11 @@ public interface AutoCloseable {
      */    void close() throws Exception;  
 }
 ```
+<br>
 
-`void close()` 만 덩그러니 정의한 인터페이스다. \
-자바 라이브러리와 수많은 서드파티 라이브러리들의 수많은 클래스와 인터페이스가 AutoCloseable을 구현하거나 extend 해두었습니다.
+`void close()` 만 덩그러니 정의한 인터페이스다.
+
+자바 라이브러리와 수많은 서드파티 라이브러리들의 수많은 클래스와 인터페이스가 AutoCloseable을 구현하거나 extend 해두었다.
 
 
 #### Good case:
@@ -88,13 +98,16 @@ public class TryWithResourcesExample {
 
 ```
 
+<br>
 
-`try-with-resources`는 exception이 발생하더라도 try 블록이 끝나면 `BufferedReader`가 자동으로 닫히도록 보장한다.. \ 
+`try-with-resources`는 exception이 발생하더라도 try 블록이 끝나면 `BufferedReader`가 자동으로 닫히도록 보장한다. \ 
 이를 통해 리소스 누출 위험을 줄이고, 명시적인 `finally` 블록이 필요하지 않아 코드를 간단하게 만든다.
+
+<br>
 
 #### Bad case:
 
-'try-with-resources'를 사용하지 않아 리소스 누출 가능성 높아짐
+'try-with-resources'를 사용하지 않아 리소스 누출 가능성 높아짐.
 
 ```java
 import java.io.BufferedReader;
@@ -128,14 +141,19 @@ public class MissingTryWithResourcesExample {
 
 ```
 
-이 예에서 `try-with-resources`를 사용하지 않으면 `finally` 블록 이전에 Exception이 발생하면 리소스 누출 가능성이 있음.. \
-또한 코드를 더 길고 유지보수가 어렵게 만듬..
+<br>
+
+이 예에서 `try-with-resources`를 사용하지 않으면 `finally` 블록 이전에 Exception이 발생하면 리소스 누출 가능성이 있음.\
+
+또한 코드를 더 길고 유지보수가 어렵게 만듬.
 
 #### Tips for using `try-with-resources` effectively
 
-1. 1.  `AutoCloseable` 인터페이스를 구현하는 리소스를 다룰 때 항상 `try-with-resources`를 사용하여 리소스를 자동으로 닫고 리소스 누출 위험을 줄이는 것이 좋음.
+1. `AutoCloseable` 인터페이스를 구현하는 리소스를 다룰 때 항상 `try-with-resources`를 사용하여 리소스를 자동으로 닫고 리소스 누출 위험을 줄이는 것이 좋음.
     
 2.  여러 리소스를 하나의 `try-with-resources` 문에서 세미콜론으로 구분하여 선언할 수 있음
+
+<br>
 
 ```java
 try (BufferedReader reader1 = new BufferedReader(new FileReader(file1));
@@ -144,6 +162,7 @@ try (BufferedReader reader1 = new BufferedReader(new FileReader(file1));
 }
 
 ```
+<br>
 
 3. 여러 개의 리소스를 사용하는 경우에는, `try-with-resources` 문에서 선언된 리소스들은 모두 독립적이어야 함. \ 
    만약 하나의 리소스가 다른 리소스에 의존한다면, 올바른 리소스의 종료 순서를 유지하기 위해 `try-with-resources` 문을 중첩시켜야 함.
