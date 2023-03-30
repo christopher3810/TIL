@@ -100,7 +100,8 @@ public class TryWithResourcesExample {
 
 <br>
 
-`try-with-resources`는 exception이 발생하더라도 try 블록이 끝나면 `BufferedReader`가 자동으로 닫히도록 보장한다. \ 
+`try-with-resources`는 exception이 발생하더라도 try 블록이 끝나면 `BufferedReader`가 자동으로 닫히도록 보장한다.
+
 이를 통해 리소스 누출 위험을 줄이고, 명시적인 `finally` 블록이 필요하지 않아 코드를 간단하게 만든다.
 
 <br>
