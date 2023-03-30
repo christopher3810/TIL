@@ -165,10 +165,10 @@ try (BufferedReader reader1 = new BufferedReader(new FileReader(file1));
 ```
 <br>
 
-3. 여러 개의 리소스를 사용하는 경우에는, `try-with-resources` 문에서 선언된 리소스들은 모두 독립적이어야 함. \ 
+3. 여러 개의 리소스를 사용하는 경우에는, `try-with-resources` 문에서 선언된 리소스들은 모두 독립적이어야 함.
    만약 하나의 리소스가 다른 리소스에 의존한다면, 올바른 리소스의 종료 순서를 유지하기 위해 `try-with-resources` 문을 중첩시켜야 함.
     
-4.  3.  리소스 종료 도중 예외가 발생하면, 모든 리소스는 닫히지만, 전파된 첫 번째 예외만이 호출자에게 전달됨. \
+4.  리소스 종료 도중 예외가 발생하면, 모든 리소스는 닫히지만, 전파된 첫 번째 예외만이 호출자에게 전달됨.
    추가적인 예외는 suppressed 될 수 있으며, `Throwable.getSuppressed()` 메소드를 사용하여 접근할 수 있음.
 
 5. `AutoCloseable` 을 구현해서 닫아야 하는 자원을 뜻하는 클래스를 작성해서 사용.
