@@ -144,7 +144,7 @@ public class MissingTryWithResourcesExample {
 
 <br>
 
-이 예에서 `try-with-resources`를 사용하지 않으면 `finally` 블록 이전에 Exception이 발생하면 리소스 누출 가능성이 있음.\
+이 예에서 `try-with-resources`를 사용하지 않으면 `finally` 블록 이전에 Exception이 발생하면 리소스 누출 가능성이 있음.
 
 또한 코드를 더 길고 유지보수가 어렵게 만듬.
 
