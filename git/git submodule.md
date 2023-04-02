@@ -6,12 +6,16 @@
 프로젝트를 진행하면 다른 Git 저장소를 현재 작업 중인 저장소에 포함해야 할 때가 있습니다. \
 이런 경우 Git 서브모듈을 사용할 수 있습니다.
 
+<br>
+
 ### Git Sudbmodules?
 
 Git 서브모듈은 한 Git 저장소에서 다른 Git 저장소를 서브 디렉토리로 포함하는 기능입니다. \
 이를 통해 두 저장소를 별개로 유지하면서 하나를 다른 것의 일부로 사용할 수 있습니다.
 
 서브모듈은 실제로는 별개의 Git 저장소입니다. 따라서 각 서브모듈은 자체 커밋 기록, 브랜치, 태그 등을 가지고 있습니다. 서브모듈을 저장소에 추가하면 해당 서브모듈의 특정 커밋을 참조하는 링크가 추가됩니다.
+
+<br>
 
 ## Git 서브모듈 사용 이유
 
@@ -23,24 +27,37 @@ Git 서브모듈을 사용하면 여러 가지 이점이 있습니다.
 둘째로, 독립적으로 업데이트 될 수 있는 다른 저장소에서 코드를 사용할 수 있습니다. \
 예를 들어 아직 활발하게 개발 중인 제3자 라이브러리를 사용하는 경우 서브모듈로 포함하고 필요에 따라 별도로 업데이트할 수 있습니다.
 
+<br>
+
 ## Git 서브모듈 사용 방법
+
+<br>
 
 ### 서브모듈 추가
 
+<br>
+
 Git 저장소에 서브모듈을 추가하려면 다음 명령을 사용합니다.
 
+<br>
 
 ```git
 git submodule add <저장소 URL> <대상 경로>
 ```
 
+<br>
+
 여기서 `저장소 URL`은 추가할 Git 저장소의 URL이고, `대상 경로`는 저장소에 추가할 서브모듈의 경로입니다. 이것은 디렉토리 이름이나 특정 파일의 경로 일 수 있습니다.
 
 예를 들어, `mylib` 저장소를 `mainrepo` 저장소의 `lib` 디렉토리에 서브모듈로 추가하려면 다음과 같은 명령어를 실행합니다.
 
+<br>
+
 ```git
 $ git submodule add https://github.com/username/mylib.git lib/mylib
 ```
+
+<br>
 
 이 명령은 `https://github.com/username/mylib.git`에서 `lib/mylib`로 서브모듈을 추가합니다.
 
@@ -48,9 +65,12 @@ $ git submodule add https://github.com/username/mylib.git lib/mylib
 
 서브모듈을 추가 한 후에는 서브모듈을 업데이트 할 필요가 있습니다. 이를 위해 다음 명령어를 사용합니다.
 
+<br>
+
 ```git
 `$ git submodule update --init --recursive`
 ```
+<br>
 
 이 명령은 서브모듈의 최신 버전을 가져와 저장소에 업데이트합니다.
 
@@ -58,11 +78,15 @@ $ git submodule add https://github.com/username/mylib.git lib/mylib
 
 서브모듈을 제거하려면 다음 명령을 실행합니다.
 
+<br>
+
 ```git
 
 $ git submodule deinit <대상 경로> $ git rm <대상 경로>
 
 ```
+
+<br>
 
 `<대상 경로>`는 제거할 서브모듈의 경로입니다. 제거한 후에는 `.gitmodules` 파일과 `.git/config` 파일에서 해당 서브모듈의 정보를 삭제해야 합니다.
 
