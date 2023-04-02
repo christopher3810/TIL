@@ -66,7 +66,7 @@ $ git submodule add https://github.com/username/mylib.git lib/mylib
 <br>
 
 ```git
-`$ git submodule update --init --recursive`
+$ git submodule update --init --recursive
 ```
 <br>
 
@@ -79,9 +79,7 @@ $ git submodule add https://github.com/username/mylib.git lib/mylib
 <br>
 
 ```git
-
 $ git submodule deinit <대상 경로> $ git rm <대상 경로>
-
 ```
 
 <br>
