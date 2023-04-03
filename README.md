@@ -47,8 +47,12 @@ This repository is licensed under the MIT license
 ☕   [Do Not Use Optional Some Case](https://github.com/christopher3810/TIL/blob/master/Java/Do%20Not%20Use%20Optional%20Some%20Case.md) \
 ☕   [var keyword guide](https://github.com/christopher3810/TIL/blob/master/Java/var%20keyword%20guide.md) \
 ☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md)
-  
 
+
+### JPA
+🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md)
+ 
+ 
 
 ### Database
 
