@@ -39,6 +39,11 @@ This repository is licensed under the MIT license
 🌱   [Functional endPoints 와 annotation-based Controller](https://github.com/christopher3810/TIL/blob/master/Spring/Functional%20endPoints%20%EC%99%80%20annotation-base%20Controller.md) \
 🌱   [Wrapper로 복잡한 Model 관리하기](https://github.com/christopher3810/TIL/blob/master/Spring/Wrapper%EB%A1%9C%20%EB%B3%B5%EC%9E%A1%ED%95%9C%20Model%20%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.md)
 
+
+## JPA
+🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md)
+
+
 ## Java
 
 ☕   [Stream 복잡한 단일 Filter vs 다중 Filter](https://github.com/christopher3810/TIL/blob/master/Java/Stream%20%EB%B3%B5%EC%9E%A1%ED%95%9C%20%EB%8B%A8%EC%9D%BC%20Filter%20vs%20%EB%8B%A4%EC%A4%91%20Filter.md) \
@@ -47,11 +52,6 @@ This repository is licensed under the MIT license
 ☕   [Do Not Use Optional Some Case](https://github.com/christopher3810/TIL/blob/master/Java/Do%20Not%20Use%20Optional%20Some%20Case.md) \
 ☕   [var keyword guide](https://github.com/christopher3810/TIL/blob/master/Java/var%20keyword%20guide.md) \
 ☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md)
-
-
-### JPA
-🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md)
- 
  
 
 ### Database
