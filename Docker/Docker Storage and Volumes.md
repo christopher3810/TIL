@@ -27,7 +27,7 @@ Docker 볼륨에 대한 3가지 포인트.
     이를 통해 Amazon EBS, Google Cloud Storage 또는 Ceph와 같은 타사 저장소 솔루션을 Docker 볼륨과 함께 사용할 수 있음.
     
 3.  `Volume Scopes` \
-   볼륨은 로컬 또는 글로벌 범위를 가질 수 있음. 
+   볼륨은 로컬 또는 글로벌 범위를 가질 수 있음. \
    로컬 볼륨은 동일한 호스트에서 실행되는 컨테이너에만 액세스할 수 있고, 글로벌 볼륨은 Docker Swarm 클러스터의 모든 컨테이너에서 사용할 수 있음.
        
 
@@ -97,7 +97,7 @@ docker run -d --name container2 -v my_shared_volume:/shared/data my_image
     
 2.   `Volume Backup` \ 
    Docker 볼륨을 정기적으로 백업하여 데이터 손실을 방지해야함. \
-    `docker cp`와 같은 네이티브 Docker 명령 또는 타사 도구를 사용하여 볼륨의 백업을 생성할 수 있음.
+   `docker cp`와 같은 네이티브 Docker 명령 또는 타사 도구를 사용하여 볼륨의 백업을 생성할 수 있음.
     
 3.   `볼륨 사용량 모니터링` \ 
    볼륨과 해당 사용량을 추적하여 스토리지 용량 문제를 방지해야 함. \
