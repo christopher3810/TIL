@@ -12,8 +12,10 @@ Docker에서 영속성 있는 저장소는 `Docker 볼륨`, `바인드 마운트
 
 ## Docker Volume Concepts
 
-Docker 볼륨은 Docker ecosystem에서 관리되는 객체로, 저장소 기술을 추상화하여 컨테이너 간의 원활한 데이터 액세스를 가능하게 함. \ 
-볼륨은 Docker command이나 API 호출을 사용하여 created, listed, inspected, 그리고 removed 할 수 있음. \
+Docker 볼륨은 Docker ecosystem에서 관리되는 객체로, 저장소 기술을 추상화하여 컨테이너 간의 원활한 데이터 액세스를 가능하게 함.
+
+볼륨은 Docker command이나 API 호출을 사용하여 created, listed, inspected, 그리고 removed 할 수 있음.
+
 Docker 볼륨에 대한 3가지 포인트.
 
 1.  **Volume Drivers**
