@@ -18,15 +18,15 @@ Docker 볼륨은 Docker ecosystem에서 관리되는 객체로, 저장소 기술
 
 Docker 볼륨에 대한 3가지 포인트.
 
-1.  **Volume Drivers**
+1.  `Volume Drivers` \
    Docker는 볼륨 드라이버를 사용하여 실제 저장소 백엔드를 처리하며, 이를 통해 볼륨이 호스트의 파일 시스템 또는 NFS 또는 클라우드 기반 저장소 서비스와 같은 원격 저장소 시스템에 저장될 수 있음. \
    기본적으로 Docker는 호스트 파일 시스템에 볼륨을 저장하는 `local` driver를 사용함.
 
-2.  **Volume Plugins** 
+2.  `Volume Plugins` \ 
    플러그인은 additional volume drivers을 제공하여 Docker의 기능을 extend 해줌. \
     이를 통해 Amazon EBS, Google Cloud Storage 또는 Ceph와 같은 타사 저장소 솔루션을 Docker 볼륨과 함께 사용할 수 있음.
     
-3.  **Volume Scopes** 
+3.  `Volume Scopes` \
    볼륨은 로컬 또는 글로벌 범위를 가질 수 있음. 
    로컬 볼륨은 동일한 호스트에서 실행되는 컨테이너에만 액세스할 수 있고, 글로벌 볼륨은 Docker Swarm 클러스터의 모든 컨테이너에서 사용할 수 있음.
        
