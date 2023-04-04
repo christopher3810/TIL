@@ -92,7 +92,7 @@ docker run -d --name container2 -v my_shared_volume:/shared/data my_image
 ### Tip For Docker Volume
 
 
-1.`Volume Plugins을 사용하기`
+1. `Volume Plugins을 사용하기`
 
 원격 또는 분산 스토리지 솔루션을 사용할 때는 볼륨 플러그인을 사용하여 볼륨 관리를 단순화하고 Docker와 통합하는게 좋음.
     
