@@ -57,7 +57,11 @@ private ProductRepository productRepository;
 
 public boolean compareProductLists() {
     List<Product> productList1 = productRepository.findAll(); // 제품 목록을 가져옵니다.
-    List<Product> productList2 = // 다른 방식으로 제품 목록을 가져옵니다.
+    List<Product> productList2 = productRepository.findByName("targetName");
+    // 확인할 제품 목록
+
+
+
 
     List<String> productIds1 = productList1.stream().map(Product::getId).collect(Collectors.toList());
     List<String> productIds2 = productList2.stream().map(Product::getId).collect(Collectors.toList());
