@@ -51,7 +51,8 @@ This repository is licensed under the MIT license
 ☕   [Java Multi Thread 환경에서의 Singleton](https://github.com/christopher3810/TIL/blob/master/Java/Multi%20Thread%20%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98%20Singleton.md) \
 ☕   [Do Not Use Optional Some Case](https://github.com/christopher3810/TIL/blob/master/Java/Do%20Not%20Use%20Optional%20Some%20Case.md) \
 ☕   [var keyword guide](https://github.com/christopher3810/TIL/blob/master/Java/var%20keyword%20guide.md) \
-☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md)
+☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md) \
+☕   [HashSet 과 List의 containsAll]( https://github.com/christopher3810/TIL/blob/master/Java/HashSet%20%EA%B3%BC%20List%EC%9D%98%20containsAll.md)
  
 
 ### Database
