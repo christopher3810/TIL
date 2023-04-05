@@ -1,4 +1,7 @@
-#  TIL (Today I Learned) 🎓✨
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/61622657/230104253-dcadbc40-88a9-4794-a9a3-8377c194452a.jpeg" alt="TIL" width="350" height="350">
+    <h1>TIL (Today I Learned) 🎓✨</h1>
+</div>
 
 > "The purpose of education is to replace an empty mind with an open one." - Malcolm Forbes
 
