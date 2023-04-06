@@ -74,6 +74,10 @@ This repository is licensed under the MIT license
 🐘   [Copy Query 를 활용한 DBFile csv file로 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Copy%20Query%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20DBFile%20csv%20file%EB%A1%9C%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md) \
 🐘   [Postgres Database Execution Plan(DB 실행 계획)과 Explain Option](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20Database%20Execution%20Plan(DB%20%EC%8B%A4%ED%96%89%20%EA%B3%84%ED%9A%8D)%EA%B3%BC%20Explain%20Option.md)
 
+### Mongo DB
+
+🍃   [MongoDB Basic](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Basic.md)
+
 ### Redis
 
 🔴   [Redis Collections](https://github.com/christopher3810/TIL/blob/master/Database/Redis/Redis%20Collections.md)
