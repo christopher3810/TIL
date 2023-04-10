@@ -57,8 +57,9 @@ This repository is licensed under the MIT license
 ☕   [Do Not Use Optional Some Case](https://github.com/christopher3810/TIL/blob/master/Java/Do%20Not%20Use%20Optional%20Some%20Case.md) \
 ☕   [var keyword guide](https://github.com/christopher3810/TIL/blob/master/Java/var%20keyword%20guide.md) \
 ☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md) \
-☕   [HashSet 과 List의 containsAll]( https://github.com/christopher3810/TIL/blob/master/Java/HashSet%20%EA%B3%BC%20List%EC%9D%98%20containsAll.md)
- 
+☕   [HashSet 과 List의 containsAll]( https://github.com/christopher3810/TIL/blob/master/Java/HashSet%20%EA%B3%BC%20List%EC%9D%98%20containsAll.md) \
+☕   [Checked & Unchecked Exception In Java]( https://github.com/christopher3810/TIL/blob/master/Java/Checked%20&%20Unchecked%20Exception%20In%20Java.md)
+
 
 ### Database
 
