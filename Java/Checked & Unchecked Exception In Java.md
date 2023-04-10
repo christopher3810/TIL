@@ -40,7 +40,7 @@ exception는 두 가지 카테고리로 나뉨 , checked exception과 unchecked 
 
 ### Transaction 에서의 unchecked exception& error
 
-**트랜잭션 메서드 실행 중에 발생하는 uncheckedException(즉, RuntimeException과 그 서브클래스) 또는 error는 default로 롤백 대상으로 간주됨.
+`트랜잭션` 메서드 실행 중에 발생하는 `uncheckedException`(즉, RuntimeException과 그 서브클래스) 또는 `error`는 default로 롤백 대상으로 간주됨.
 
 
 ### Custom Exception 예제
