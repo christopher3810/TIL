@@ -24,18 +24,18 @@ exception는 두 가지 카테고리로 나뉨 , checked exception과 unchecked 
 
 체크 예외가 처리되거나 선언되지 않으면 코드는 컴파일되지 않음.
 
-체크 예외의 예로는 **`IOException`**, **`FileNotFoundException`** 및 **`ClassNotFoundException`**이 있음
+체크 예외의 예로는 **`IOException`**, **`FileNotFoundException`** 및 **`ClassNotFoundException`** 이 있음
 
   
 ### unchecked exception
 
-언체크 예외는 **`RuntimeException`**에서 상속된 예외.
+언체크 예외는 **`RuntimeException`** 에서 상속된 예외.
 
 이러한 예외는 명시적으로 처리하거나 메서드의 **`throws`** 절에서 선언할 필요가 없음.
 
 언체크 예외는 런타임에 검사되며 컴파일러가 처리를 강제하지 않음.
 
-언체크 예외의 예로는 **`NullPointerException`**, **`ArithmeticException`**, **`ArrayIndexOutOfBoundsException`** 및 **`IllegalArgumentException`**이 있음.
+언체크 예외의 예로는 **`NullPointerException`**, **`ArithmeticException`**, **`ArrayIndexOutOfBoundsException`** 및 **`IllegalArgumentException`** 이 있음.
 
 
 ### Transaction 에서의 unchecked exception& error
