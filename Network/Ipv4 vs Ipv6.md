@@ -66,6 +66,7 @@ IPv6에서는 발신자만이 fragmentation을 수행할 수 있음.
 
 발신자는 Path MTU Discovery 프로토콜을 사용하여 경로 상의 최소 MTU를 파악하고, 이를 기반으로 패킷을 적절한 크기로 나누어 전송.
 
+<br>
 
 ### ipv4 vs ipv6 비교 테이블
 
