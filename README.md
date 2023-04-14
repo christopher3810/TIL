@@ -46,7 +46,8 @@ This repository is licensed under the MIT license
 ☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md) \
 ☕   [HashSet 과 List의 containsAll]( https://github.com/christopher3810/TIL/blob/master/Java/HashSet%20%EA%B3%BC%20List%EC%9D%98%20containsAll.md) \
 ☕   [Checked & Unchecked Exception In Java]( https://github.com/christopher3810/TIL/blob/master/Java/Checked%20&%20Unchecked%20Exception%20In%20Java.md) \
-☕   [Java Thread Synchronization wait(), notify(), and notifyAll()]( https://github.com/christopher3810/TIL/blob/master/Java/Java%20Thread%20Synchronization%20wait()%2C%20notify()%2C%20and%20notifyAll().md)
+☕   [Java Thread Synchronization wait(), notify(), and notifyAll()]( https://github.com/christopher3810/TIL/blob/master/Java/Java%20Thread%20Synchronization%20wait()%2C%20notify()%2C%20and%20notifyAll().md) \
+☕   [lombok @Delegate annotationn]( https://github.com/christopher3810/TIL/blob/master/Java/lombok%20@Delegate%20annotationn.md)
 
 ### Database
 
