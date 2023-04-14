@@ -55,7 +55,7 @@ public class CombinedCalculator {
 
 ```
 
-렇게 하면 `CombinedCalculator`는 `add()`, `subtract()`, 그리고 `power()` 메서드를 모두 제공하며 내부적으로 `basicCalculator`와 `advancedCalculator` 인스턴스로 호출을 위임.
+이렇게 하면 `CombinedCalculator`는 `add()`, `subtract()`, 그리고 `power()` 메서드를 모두 제공하며 내부적으로 `basicCalculator`와 `advancedCalculator` 인스턴스로 호출을 위임.
 
 ### type and exclude
 
