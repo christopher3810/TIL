@@ -119,8 +119,8 @@ This repository is licensed under the MIT license
 
 🐱   [Merge와 Rebase의 차이점](https://github.com/christopher3810/TIL/blob/master/git/Merge%20vs%20Rebase.md) \
 🐱   [git reflog를 활용한 commit 복구](https://github.com/christopher3810/TIL/blob/master/git/git%20reflog%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20commit%20%EB%B3%B5%EA%B5%AC.md) \
-🐱   [git submodule](https://github.com/christopher3810/TIL/blob/master/git/git%20submodule.md)
-
+🐱   [git submodule](https://github.com/christopher3810/TIL/blob/master/git/git%20submodule.md) \
+🐱   [git client side hook (commit workflow hook)](https://github.com/christopher3810/TIL/blob/master/git/git%20client%20side%20hook%20(commit%20workflow%20hook).md)
 ### Etc
 
 🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md)
