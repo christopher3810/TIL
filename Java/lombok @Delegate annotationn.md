@@ -7,7 +7,7 @@ lombok 어노테이션중 알려지지 않은 기능 중 하나는 클래스에�
 
 ## Usage Examples
 
-예제를 확인 해보자.
+예제를 확인 해보자.
 
 ```java
 public interface Calculator {    
@@ -55,7 +55,7 @@ public class CombinedCalculator {
 
 ```
 
-렇게 하면 `CombinedCalculator`는 `add()`, `subtract()`, 그리고 `power()` 메서드를 모두 제공하며 내부적으로 `basicCalculator`와 `advancedCalculator` 인스턴스로 호출을 위임.
+이렇게 하면 `CombinedCalculator`는 `add()`, `subtract()`, 그리고 `power()` 메서드를 모두 제공하며 내부적으로 `basicCalculator`와 `advancedCalculator` 인스턴스로 호출을 위임.
 
 ### type and exclude
 
@@ -136,6 +136,6 @@ public class DelegatingCollection {
 
 ```
 
-DelegatingCollection` 클래스가 `Collection` 객체를 내부적으로 가지고 있으며, `@Delegate(excludes = Add.class)`를 사용하여 `add`와 `addAll` 메서드를 제외한 나머지 메서드들을 위임하고 있음. 
+`DelegatingCollection` 클래스가 `Collection` 객체를 내부적으로 가지고 있으며, `@Delegate(excludes = Add.class)`를 사용하여 `add`와 `addAll` 메서드를 제외한 나머지 메서드들을 위임하고 있음. 
 
 `customAdd`와 `customAddAll` 메서드를 사용하여 기존 `add`와 `addAll` 메서드에 대한 사용자 정의 구현을 제공할 수 있음.

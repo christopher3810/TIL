@@ -46,7 +46,8 @@ This repository is licensed under the MIT license
 ☕   [Try With Resource And AutoClosable](https://github.com/christopher3810/TIL/blob/master/Java/Try%20With%20Resource%20And%20AutoClosable.md) \
 ☕   [HashSet 과 List의 containsAll]( https://github.com/christopher3810/TIL/blob/master/Java/HashSet%20%EA%B3%BC%20List%EC%9D%98%20containsAll.md) \
 ☕   [Checked & Unchecked Exception In Java]( https://github.com/christopher3810/TIL/blob/master/Java/Checked%20&%20Unchecked%20Exception%20In%20Java.md) \
-☕   [Java Thread Synchronization wait(), notify(), and notifyAll()]( https://github.com/christopher3810/TIL/blob/master/Java/Java%20Thread%20Synchronization%20wait()%2C%20notify()%2C%20and%20notifyAll().md)
+☕   [Java Thread Synchronization wait(), notify(), and notifyAll()]( https://github.com/christopher3810/TIL/blob/master/Java/Java%20Thread%20Synchronization%20wait()%2C%20notify()%2C%20and%20notifyAll().md) \
+☕   [lombok @Delegate annotationn]( https://github.com/christopher3810/TIL/blob/master/Java/lombok%20@Delegate%20annotationn.md)
 
 ### Database
 
@@ -60,7 +61,8 @@ This repository is licensed under the MIT license
 ### Postgres
 
 🐘   [Copy Query 를 활용한 DBFile csv file로 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Copy%20Query%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20DBFile%20csv%20file%EB%A1%9C%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md) \
-🐘   [Postgres Database Execution Plan(DB 실행 계획)과 Explain Option](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20Database%20Execution%20Plan(DB%20%EC%8B%A4%ED%96%89%20%EA%B3%84%ED%9A%8D)%EA%B3%BC%20Explain%20Option.md)
+🐘   [Postgres Database Execution Plan(DB 실행 계획)과 Explain Option](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20Database%20Execution%20Plan(DB%20%EC%8B%A4%ED%96%89%20%EA%B3%84%ED%9A%8D)%EA%B3%BC%20Explain%20Option.md) \
+🐘   [Postgres Port 변경 & User Password 변경](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20Port%20%EB%B3%80%EA%B2%BD%20%26%20User%20Password%20%EB%B3%80%EA%B2%BD.md)
 
 ### Mongo DB
 
