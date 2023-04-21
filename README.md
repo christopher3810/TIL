@@ -29,7 +29,8 @@ This repository is licensed under the MIT license
 🌱   [Spring @Transaction 전파 유형 1(REQUIRED, REQUIRES_NEW, SUPPORTS, NOT_SUPPORTED)](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20%40Transaction%20%EC%A0%84%ED%8C%8C%20%EC%9C%A0%ED%98%95%201(REQUIRED%2C%20REQUIRES_NEW%2C%20SUPPORTS%2C%20NOT_SUPPORTED).md) \
 🌱   [Spring @Transaction 전파 유형 2(MANDATORY, NEVER,NESTED)](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20%40Transaction%20%EC%A0%84%ED%8C%8C%20%EC%9C%A0%ED%98%95%202(MANDATORY%2C%20NEVER%2CNESTED).md) \
 🌱   [Functional endPoints 와 annotation-based Controller](https://github.com/christopher3810/TIL/blob/master/Spring/Functional%20endPoints%20%EC%99%80%20annotation-base%20Controller.md) \
-🌱   [Wrapper로 복잡한 Model 관리하기](https://github.com/christopher3810/TIL/blob/master/Spring/Wrapper%EB%A1%9C%20%EB%B3%B5%EC%9E%A1%ED%95%9C%20Model%20%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.md)
+🌱   [Wrapper로 복잡한 Model 관리하기](https://github.com/christopher3810/TIL/blob/master/Spring/Wrapper%EB%A1%9C%20%EB%B3%B5%EC%9E%A1%ED%95%9C%20Model%20%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.md) \
+🌱   [Mockito.mock() vs @Mock vs @MockBean & @Autowired vs @InjectionMock](https://github.com/christopher3810/TIL/blob/master/Spring/Mockito.mock()%20vs%20%40Mock%20vs%20%40MockBean%20%26%20%40Autowired%20vs%20%40InjectionMock.md)
 
 
 ## JPA
