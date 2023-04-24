@@ -12,6 +12,7 @@ $ pg_dump -t 'users' --schema-only my_database > users.schema.sql
 ```
 
 위 명령어를 실행하면 `users.schema.sql` 파일이 생성되며, 이 파일에는 테이블을 재생성하는데 필요한 SQL 명령어들이 포함됨.
+
 이를 통해 다음 작업들을 수행할 수 있음.
 
 1.  테이블 생성: 컬럼 정보, 기본값, NOT NULL 제약 조건 등 포함
