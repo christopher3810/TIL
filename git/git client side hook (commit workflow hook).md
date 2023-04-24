@@ -17,6 +17,7 @@ Git 저장소를 초기화할 때(`git init`을 실행할 때) 자동으로 생�
 이 샘플들은 확장자가 `.sample`로 되어 있으며, 사용하려면 확장자를 제거하고 실행 가능한 상태로 변경해야 한다.
 
 즉 `.sample` 확장자를 제거해주면 된다.
+
 ![git_hooks](https://user-images.githubusercontent.com/61622657/230907155-49dc6b71-52fd-4e23-8630-925725fb7092.png)
 
 
