@@ -33,9 +33,9 @@ public void givenCountMethodMocked_WhenCountInvoked_ThenMockedValueReturned() {
 
  _mock()_ method와 달리, 이 어노테이션을 사용하려면 Mockito 어노테이션을 활성화해야 함.
 
- _MockitoJUnitRunner_를 사용하여 테스트를 실행하거나 _MockitoAnnotations.initMocks()_ 메서드를 명시적으로 호출하여 수행할 수 있음.
+ _MockitoJUnitRunner_ 를 사용하여 테스트를 실행하거나 _MockitoAnnotations.initMocks()_ 메서드를 명시적으로 호출하여 수행할 수 있음.
 
-MockitoJUnitRunner_를 사용한 예제.
+_MockitoJUnitRunner_ 를 사용한 예제.
 
 ```java
 @RunWith(MockitoJUnitRunner.class)
