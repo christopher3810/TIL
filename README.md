@@ -64,7 +64,9 @@ This repository is licensed under the MIT license
 🐘   [Copy Query 를 활용한 DBFile csv file로 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Copy%20Query%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20DBFile%20csv%20file%EB%A1%9C%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md) \
 🐘   [Postgres Database Execution Plan(DB 실행 계획)과 Explain Option](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20Database%20Execution%20Plan(DB%20%EC%8B%A4%ED%96%89%20%EA%B3%84%ED%9A%8D)%EA%B3%BC%20Explain%20Option.md) \
 🐘   [Postgres Port 변경 & User Password 변경](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20Port%20%EB%B3%80%EA%B2%BD%20%26%20User%20Password%20%EB%B3%80%EA%B2%BD.md) \
-🐘   [PostgreSQL 테이블 구조 재생성을 위한 SQL 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/PostgreSQL%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EA%B5%AC%EC%A1%B0%20%EC%9E%AC%EC%83%9D%EC%84%B1%EC%9D%84%20%EC%9C%84%ED%95%9C%20SQL%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md)
+🐘   [PostgreSQL 테이블 구조 재생성을 위한 SQL 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/PostgreSQL%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EA%B5%AC%EC%A1%B0%20%EC%9E%AC%EC%83%9D%EC%84%B1%EC%9D%84%20%EC%9C%84%ED%95%9C%20SQL%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md) \
+🐘   [Postgres table 을 json Data로 변환 및 Json 파일로 저장](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20table%20%EC%9D%84%20json%20Data%EB%A1%9C%20%EB%B3%80%ED%99%98%20%EB%B0%8F%20Json%20%ED%8C%8C%EC%9D%BC%EB%A1%9C%20%EC%A0%80%EC%9E%A5.md)
+
 
 ### Mongo DB
 
