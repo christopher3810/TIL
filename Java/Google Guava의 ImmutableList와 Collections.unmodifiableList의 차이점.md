@@ -1,5 +1,6 @@
 
 Java에서 불변 컬렉션을 사용하는 데에는 주로 두 가지 방법을 사용했음. 
+
 하나는 Google Guava 라이브러리의 `ImmutableList`를 사용하는 것이고, 다른 하나는 `java.util.Collections`의 `unmodifiableList()` 메서드를 사용하는 것. 
 
 ## 1. 각각의 자료구조를 사용하는 차이점
