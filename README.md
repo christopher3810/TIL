@@ -34,7 +34,7 @@ This repository is licensed under the MIT license
 
 
 ## JPA
-🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md)
+🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md) \
 🗂️   [Spring Data JPA Query Creation](https://github.com/christopher3810/TIL/blob/master/JPA/Spring%20Data%20JPA%20Query%20Creation.md)
 
 
