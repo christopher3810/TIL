@@ -120,7 +120,9 @@ This repository is licensed under the MIT license
 ## Gradle
 
 🐘   [Gradle Cache & Descriptor(Description.bin)](https://github.com/christopher3810/TIL/blob/master/Gradle/Gradle%20Cache%20%26%20Descriptor(Description.bin).md)\
-🐘   [gradle build --refresh-dependencies](https://github.com/christopher3810/TIL/blob/master/Gradle/gradle%20build%20--refresh-dependencies.md)
+🐘   [gradle build --refresh-dependencies](https://github.com/christopher3810/TIL/blob/master/Gradle/gradle%20build%20--refresh-dependencies.md) \
+🐘   [build.gradle implementation vs api](https://github.com/christopher3810/TIL/blob/master/Gradle/build.gradle%20implementation%20vs%20api.md)
+
 
 ## Git
 
