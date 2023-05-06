@@ -87,3 +87,9 @@ User        Service
       Hacker---> 
 ```
 
+
+### 참조
+
+[baeldung](https://www.baeldung.com/cs/security-interruption-interception-modification-fabrication) \
+[LibreText](https://eng.libretexts.org/Courses/Delta_College/Information_Security/01%3A_Information_Security_Defined/1.4_Attacks_-_Types_of_Attacks)
+
