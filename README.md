@@ -35,7 +35,8 @@ This repository is licensed under the MIT license
 
 ## JPA
 🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md) \
-🗂️   [Spring Data JPA Query Creation](https://github.com/christopher3810/TIL/blob/master/JPA/Spring%20Data%20JPA%20Query%20Creation.md)
+🗂️   [Spring Data JPA Query Creation](https://github.com/christopher3810/TIL/blob/master/JPA/Spring%20Data%20JPA%20Query%20Creation.md) \
+🗂️   [@where Annotation](https://github.com/christopher3810/TIL/blob/master/JPA/%40Where%20Annotation.md)
 
 
 ## Java
@@ -91,7 +92,8 @@ This repository is licensed under the MIT license
 🌐  [CipherSuit](https://github.com/christopher3810/TIL/blob/master/Network/Cipher%20Suit.md)\
 🌐  [HTTP Status Code](https://github.com/christopher3810/TIL/blob/master/Network/Http%20Status%20Code.md)\
 🌐  [SDN](https://github.com/christopher3810/TIL/blob/master/Network/SDN.md)\
-🌐  [ipv4 vs ipv6](https://github.com/christopher3810/TIL/blob/master/Network/Ipv4%20vs%20Ipv6.md)
+🌐  [ipv4 vs ipv6](https://github.com/christopher3810/TIL/blob/master/Network/Ipv4%20vs%20Ipv6.md) \
+🌐  [Interruption vs Interception vs Modification vs Fabrication](https://github.com/christopher3810/TIL/blob/master/Network/Interruption%20vs%20Interception%20vs%20Modification%20vs%20Fabrication.md)
   
 
 ## Virtualization
@@ -120,7 +122,9 @@ This repository is licensed under the MIT license
 ## Gradle
 
 🐘   [Gradle Cache & Descriptor(Description.bin)](https://github.com/christopher3810/TIL/blob/master/Gradle/Gradle%20Cache%20%26%20Descriptor(Description.bin).md)\
-🐘   [gradle build --refresh-dependencies](https://github.com/christopher3810/TIL/blob/master/Gradle/gradle%20build%20--refresh-dependencies.md)
+🐘   [gradle build --refresh-dependencies](https://github.com/christopher3810/TIL/blob/master/Gradle/gradle%20build%20--refresh-dependencies.md) \
+🐘   [build.gradle implementation vs api](https://github.com/christopher3810/TIL/blob/master/Gradle/build.gradle%20implementation%20vs%20api.md)
+
 
 ## Git
 
