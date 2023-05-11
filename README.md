@@ -51,7 +51,8 @@ This repository is licensed under the MIT license
 ☕   [Checked & Unchecked Exception In Java]( https://github.com/christopher3810/TIL/blob/master/Java/Checked%20&%20Unchecked%20Exception%20In%20Java.md) \
 ☕   [Java Thread Synchronization wait(), notify(), and notifyAll()]( https://github.com/christopher3810/TIL/blob/master/Java/Java%20Thread%20Synchronization%20wait()%2C%20notify()%2C%20and%20notifyAll().md) \
 ☕   [lombok @Delegate annotationn]( https://github.com/christopher3810/TIL/blob/master/Java/lombok%20@Delegate%20annotationn.md) \
-☕   [Google Guava의 ImmutableList와 Collections.unmodifiableList의 차이점](https://github.com/christopher3810/TIL/blob/master/Java/Google%20Guava%EC%9D%98%20ImmutableList%EC%99%80%20Collections.unmodifiableList%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90.md)
+☕   [Google Guava의 ImmutableList와 Collections.unmodifiableList의 차이점](https://github.com/christopher3810/TIL/blob/master/Java/Google%20Guava%EC%9D%98%20ImmutableList%EC%99%80%20Collections.unmodifiableList%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90.md)\
+☕   [TimeStamp 소수점 자리수 Formatting]([https://github.com/christopher3810/TIL/blob/master/Java/Google%20Guava%EC%9D%98%20ImmutableList%EC%99%80%20Collections.unmodifiableList%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90.md](https://github.com/christopher3810/TIL/blob/master/Java/TimeStampFormatting%20%EC%86%8C%EC%88%98%EC%A0%90%20%EC%9E%90%EB%A6%AC%EC%88%98..md))
 
 
 ### Database
