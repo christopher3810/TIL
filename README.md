@@ -124,9 +124,8 @@ This repository is licensed under the MIT license
 
 🐘   [Gradle Cache & Descriptor(Description.bin)](https://github.com/christopher3810/TIL/blob/master/Gradle/Gradle%20Cache%20%26%20Descriptor(Description.bin).md)\
 🐘   [gradle build --refresh-dependencies](https://github.com/christopher3810/TIL/blob/master/Gradle/gradle%20build%20--refresh-dependencies.md) \
-🐘   [build.gradle implementation vs api](https://github.com/christopher3810/TIL/blob/master/Gradle/build.gradle%20implementation%20vs%20api.md)
-
-
+🐘   [build.gradle implementation vs api](https://github.com/christopher3810/TIL/blob/master/Gradle/build.gradle%20implementation%20vs%20api.md) \
+🐘   [Gradle 의존성 트리 및 의존성 ](https://github.com/christopher3810/TIL/blob/master/Gradle/Gradle%20%EC%9D%98%EC%A1%B4%EC%84%B1%20%ED%8A%B8%EB%A6%AC.md)
 ## Git
 
 🐱   [Merge와 Rebase의 차이점](https://github.com/christopher3810/TIL/blob/master/git/Merge%20vs%20Rebase.md) \
