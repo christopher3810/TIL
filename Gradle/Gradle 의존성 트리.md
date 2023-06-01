@@ -93,7 +93,7 @@ configurations 블록 사용해서 의존성 전체에 대해서 글로벌 하�
 
 프로젝트의 다양한 모듈과 라이브러리가 동일한 라이브러리의 서로 다른 버전을 참조하는 경우, 의존성 충돌이 발생할 수 있음. 
 
-Gradle은 이런 문제를 해결하기 위해 `resolutionStrategy`를 제공합니다.
+Gradle은 이런 문제를 해결하기 위해 `resolutionStrategy`를 제공.
 
 ```groovy
 configurations.all {
