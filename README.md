@@ -75,8 +75,9 @@ This repository is licensed under the MIT license
 
 ### Mongo DB
 
-🍃   [MongoDB Basic](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Basic.md)
-
+🍃   [MongoDB Basic](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Basic.md)\
+🍃   [MongoDB Data Modeling](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Data%20Modeling.md)\
+🍃   [MongoDB Modeling Pattern](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Modeling%20Pattern.md)
 ### Redis
 
 🔴   [Redis Collections](https://github.com/christopher3810/TIL/blob/master/Database/Redis/Redis%20Collections.md)
