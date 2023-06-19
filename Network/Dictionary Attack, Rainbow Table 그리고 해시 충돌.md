@@ -1,7 +1,5 @@
 
 
-해시 알고리즘: MD5, SHA0, SHA1, 그리고 해시 충돌, 사전 공격, 레인보우 테이블
-
 ### 해시 알고리즘과 해시 충돌
 
 MD5(Message Digest Algorithm 5), SHA0, SHA1(Secure Hash Algorithm 1) 같은 해시 알고리즘은 과거에 널리 사용되었지만, 현재는 그들의 보안 취약점 때문에 사용되지 않음.
