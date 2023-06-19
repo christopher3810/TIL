@@ -16,7 +16,7 @@ Dictionary Attack 은 암호를 풀 때 많이 사용하는 기법 중 하나.
 
 만약 해시 알고리즘이 약하다면, 공격자는 사전 공격을 통해 원래의 입력 값을 복구할 수 있음.
 
-### ### Dictionary Attack vs Brute Force
+### Dictionary Attack vs Brute Force
 
 `Dictionary Attack`
 
