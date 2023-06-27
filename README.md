@@ -30,8 +30,7 @@ This repository is licensed under the MIT license
 🌱   [Spring @Transaction 전파 유형 2(MANDATORY, NEVER,NESTED)](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20%40Transaction%20%EC%A0%84%ED%8C%8C%20%EC%9C%A0%ED%98%95%202(MANDATORY%2C%20NEVER%2CNESTED).md) \
 🌱   [Functional endPoints 와 annotation-based Controller](https://github.com/christopher3810/TIL/blob/master/Spring/Functional%20endPoints%20%EC%99%80%20annotation-base%20Controller.md) \
 🌱   [Wrapper로 복잡한 Model 관리하기](https://github.com/christopher3810/TIL/blob/master/Spring/Wrapper%EB%A1%9C%20%EB%B3%B5%EC%9E%A1%ED%95%9C%20Model%20%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.md) \
-🌱   [Mockito.mock() vs @Mock vs @MockBean & @Autowired vs @InjectionMock](https://github.com/christopher3810/TIL/blob/master/Spring/Mockito.mock()%20vs%20%40Mock%20vs%20%40MockBean%20%26%20%40Autowired%20vs%20%40InjectionMock.md) \
-🌱   [Helper Class & Utill Class](https://github.com/christopher3810/TIL/blob/master/Java/Helper%20Class%20%26%20Utill%20Class.md)
+🌱   [Mockito.mock() vs @Mock vs @MockBean & @Autowired vs @InjectionMock](https://github.com/christopher3810/TIL/blob/master/Spring/Mockito.mock()%20vs%20%40Mock%20vs%20%40MockBean%20%26%20%40Autowired%20vs%20%40InjectionMock.md)
 
 
 ## JPA
@@ -53,7 +52,8 @@ This repository is licensed under the MIT license
 ☕   [Java Thread Synchronization wait(), notify(), and notifyAll()]( https://github.com/christopher3810/TIL/blob/master/Java/Java%20Thread%20Synchronization%20wait()%2C%20notify()%2C%20and%20notifyAll().md) \
 ☕   [lombok @Delegate annotationn]( https://github.com/christopher3810/TIL/blob/master/Java/lombok%20@Delegate%20annotationn.md) \
 ☕   [Google Guava의 ImmutableList와 Collections.unmodifiableList의 차이점](https://github.com/christopher3810/TIL/blob/master/Java/Google%20Guava%EC%9D%98%20ImmutableList%EC%99%80%20Collections.unmodifiableList%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90.md)\
-☕   [ParallStream CPU-Bounded , IO-Bounded, 상태 공유](https://github.com/christopher3810/TIL/blob/master/Java/ParallStream%20CPU-Bounded%20%2C%20IO-Bounded%2C%20%EC%83%81%ED%83%9C%20%EA%B3%B5%EC%9C%A0.md)
+☕   [ParallStream CPU-Bounded , IO-Bounded, 상태 공유](https://github.com/christopher3810/TIL/blob/master/Java/ParallStream%20CPU-Bounded%20%2C%20IO-Bounded%2C%20%EC%83%81%ED%83%9C%20%EA%B3%B5%EC%9C%A0.md) \
+☕   [Helper Class & Utill Class](https://github.com/christopher3810/TIL/blob/master/Java/Helper%20Class%20%26%20Utill%20Class.md)
 
 
 ### Database
