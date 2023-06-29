@@ -138,5 +138,5 @@ This repository is licensed under the MIT license
 🐱   [git client side hook (commit workflow hook)](https://github.com/christopher3810/TIL/blob/master/git/git%20client%20side%20hook%20(commit%20workflow%20hook).md)
 ### Etc
 
-🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md)
+🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md) \
 💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/etc_hosts%20%2C%20local%20dns.md)
