@@ -54,7 +54,8 @@ This repository is licensed under the MIT license
 ☕   [lombok @Delegate annotationn]( https://github.com/christopher3810/TIL/blob/master/Java/lombok%20@Delegate%20annotationn.md) \
 ☕   [Google Guava의 ImmutableList와 Collections.unmodifiableList의 차이점](https://github.com/christopher3810/TIL/blob/master/Java/Google%20Guava%EC%9D%98%20ImmutableList%EC%99%80%20Collections.unmodifiableList%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90.md)\
 ☕   [ParallStream CPU-Bounded , IO-Bounded, 상태 공유](https://github.com/christopher3810/TIL/blob/master/Java/ParallStream%20CPU-Bounded%20%2C%20IO-Bounded%2C%20%EC%83%81%ED%83%9C%20%EA%B3%B5%EC%9C%A0.md) \
-☕   [Helper Class & Utill Class](https://github.com/christopher3810/TIL/blob/master/Java/Helper%20Class%20%26%20Utill%20Class.md)
+☕   [Helper Class & Utill Class](https://github.com/christopher3810/TIL/blob/master/Java/Helper%20Class%20%26%20Utill%20Class.md) \
+☕   [jstack을 활용한 스레드 덤프](https://github.com/christopher3810/TIL/blob/master/Java/jstack%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%8A%A4%EB%A0%88%EB%93%9C%20%EB%8D%A4%ED%94%84.md)
 
 
 ### Database
