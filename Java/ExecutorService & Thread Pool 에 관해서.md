@@ -168,9 +168,9 @@ executorService.schedule(() -> {
 의 경우  ScheduledExecutorService를 래핑한것임.
 
 
-### 예제
-
-사용자의 요청에 대해 독립적으로 처리해야 하는 상황.
+- 예제
+- 
+사용자의 요청에 대해 독립적으로 처리해야 하는 상황
 
 예를 들어, 사용자가 특정 작업을 요청하고 서버는 해당 작업을 병렬로 처리하고자 할 때 `newFixedThreadPool`를 활용하면 좋음.
 
