@@ -1,5 +1,7 @@
 
->병렬처리 및 스레드 관리시 중요한 요소 이기 때문에 java.util.concurrent 패키지 내의 Executors 클래스에 내부 구현체들과 실제 사용 예제들에 대해서 정리해보도록 하겠습니다. 
+>병렬처리 및 스레드 관리시 중요한 요소 이기 때문에 
+>Java 19 까지 추가된 메서드를 포함해서 
+>java.util.concurrent 패키지 내의 Executors 클래스에 내부 구현체들과 실제 사용 예제들에 대해서 정리해보도록 하겠습니다. 
 
 ---
 
@@ -195,3 +197,83 @@ public class DataUpdateService {
     }
 }
 ```
+
+
+### Java 19 이상
+---
+
+>  Java 19 이상 부터는
+>  ThreadPerTaskExecutor와 Virtual Thread 가 도입됨
+
+
+### ThreadPerTaskExecutor 
+---
+
+이 Executor는 각 작업에 대해 새로운 스레드를 생성. 
+
+작업의 수에 따라 `생성되는 스레드의 수가 무제한`
+
+```java
+ThreadFactory threadFactory = Executors.defaultThreadFactory();
+ExecutorService executor = ThreadPerTaskExecutor.create(threadFactory);
+
+List<Callable<Integer>> tasks = new ArrayList<>();
+for (int i = 0; i < 100; i++) {
+    tasks.add(() -> {
+        // Perform some CPU-intensive task...
+        int result = IntStream.range(0, 1000000).sum();
+        return result;
+    });
+}
+
+try {
+    List<Future<Integer>> futures = executor.invokeAll(tasks);
+    // Handle the results...
+} catch (InterruptedException e) {
+    // Handle exception...
+}
+```
+
+### ThreadPerTaskExecutor와 CachedThreadPool 비교
+---
+그렇다면 CachedThreadPool과의 차이점은 무엇일까?
+
+`CachedThreadPool`
+
+`CachedThreadPool`은 필요에 따라 새로운 스레드를 생성하지만, `이전에 생성된 스레드가 사용 가능한 경우 재사용`. 
+
+또한, `일정 시간 동안 사용되지 않은 스레드는 제거`함.
+
+이 방식은 `작업의 수가 일정하지 않고 변동이 큰 경우에 유용`하며, 스레드 `생성 비용을 절약` 할 수 있음.
+
+|비교 기준|ThreadPerTaskExecutor|CachedThreadPool|
+|---|---|---|
+|스레드 생성|각 작업에 대해 새로운 스레드 생성|필요에 따라 새로운 스레드 생성, 가능한 경우 기존 스레드 재사용|
+|스레드 제거|작업 완료 후 스레드 제거|일정 시간 동안 사용되지 않은 스레드 제거|
+|스레드 수|무제한|무제한, 하지만 재사용과 제거를 통해 관리|
+|사용 사례|많은 수의 독립적인 작업 빠르게 처리|작업의 수가 일정하지 않고 변동이 큰 경우|
+
+`ThreadPerTaskExecutor`는 `작업 간에 의존성이 없고, 많은 수의 작업을 빠르게 처리해야 하는 경우에 적합`.
+
+반면, `CachedThreadPool`은 `작업의 수가 불규칙하거나 스레드 생성 비용을 최소화해야 하는 경우에 적합`.
+
+### Virtual Threads
+---
+
+Virtual Threads는 OS의 쓰레드와 대응되는 개념도 아니고, JVM에서 직접 쓰레드를 생성하기 때문에 생성 비용(용량/시간 등등의 측면에서)이 비싸지도 않고, 크기가 자동으로 조절되기 때문에 쓰레드 풀처럼 갯수를 관리할 필요가 없음.
+
+Virtual Thread와 Fiber와 같은 경량스레드 그리고 java Project Loom에 대해서는 다른 글에서 자세하게 다루겠다.
+
+```java
+ExecutorService executor = Thread.newVirtualThreadPerTaskExecutor();
+
+ServerSocket serverSocket = new ServerSocket(8000);
+while (true) {
+    Socket clientSocket = serverSocket.accept();
+    executor.submit(() -> {
+        // Handle client request...
+    });
+}
+
+```
+
