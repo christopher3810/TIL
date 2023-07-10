@@ -140,7 +140,7 @@ This repository is licensed under the MIT license
 🐱   [git submodule](https://github.com/christopher3810/TIL/blob/master/git/git%20submodule.md) \
 🐱   [git client side hook (commit workflow hook)](https://github.com/christopher3810/TIL/blob/master/git/git%20client%20side%20hook%20(commit%20workflow%20hook).md)
 
-### Book
+### Study With Book
 📓   [읽기 좋은 코드가 좋은 코드다(The Art of Readable Code)](https://github.com/christopher3810/TIL/tree/master/book/%EC%9D%BD%EA%B8%B0%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EA%B0%80%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%8B%A4(The%20Art%20of%20Readable%20Code))
 
 ### Etc
