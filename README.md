@@ -9,12 +9,16 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/christopher3810/TIL?style=flat-square) ![GitHub Repo stars](https://img.shields.io/github/stars/christopher3810/TIL?style=flat-square)
 
-TIL을 기록하기 위해 만든 Git Repository 입니다.  
+이 Git 저장소는 TIL(Today I Learned)을 기록하기 위해 만들어졌습니다.
 
-크게 두가지 Section 이 존재합니다.
+이 저장소는 주로 두가지 목적 으로 구성되어 있습니다.
 
-1. 저의 [개발블로그](https://colevelup.tistory.com/)에 올라가는 글보다는 짧게 작성하지만 블로그 글을 작성하는데 토대 가되는 지식들을 하나하나 기록하며 구조화 하기.
-2. 책을 활용한 스터디 정보 기록하고 공유하기.
+1. [개발 블로그](https://colevelup.tistory.com/)에 게시되는 글보다는 간결하게 표현된 핵심 개념과 지식을 구조적으로 기록하는 공간입니다.
+2. 책을 활용한 스터디 자료를 기록하고 공유하는 공간입니다.
+
+TIL Repository는 작성자인 저의 개인의 지속적인 학습을 추구하고, 그 과정에서 얻은 지식을 공유하려는 목표를 가지고 있습니다. 
+
+이곳에서 제공하는 모든 정보와 자료가 혹시나 있을 방문자의 각각의 성장과 발전에 기여하길 진심으로 기원합니다.
 
 ---
 
