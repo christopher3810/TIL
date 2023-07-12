@@ -10,7 +10,11 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/christopher3810/TIL?style=flat-square) ![GitHub Repo stars](https://img.shields.io/github/stars/christopher3810/TIL?style=flat-square)
 
 TIL을 기록하기 위해 만든 Git Repository 입니다.  
-저의 [개발블로그](https://colevelup.tistory.com/)에 올라가는 글보다는 짧게 작성하지만 블로그 글을 작성하는데 토대 가되는 지식들을 하나하나 적어 나가려 합니다.
+
+크게 두가지 Section 이 존재합니다.
+
+1. 저의 [개발블로그](https://colevelup.tistory.com/)에 올라가는 글보다는 짧게 작성하지만 블로그 글을 작성하는데 토대 가되는 지식들을 하나하나 기록하며 구조화 하기.
+2. 책을 활용한 스터디 정보 기록하고 공유하기.
 
 ---
 
