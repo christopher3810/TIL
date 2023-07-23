@@ -127,4 +127,5 @@ public void printFactorialTime(int n) {
 
 ### 각 Big O 시간 복잡도 시각화 표
 
-![bigoGraph](https://github.com/christopher3810/TIL/assets/61622657/0528dd89-ba9e-44b8-b867-6911ee02937e)
+<img src="https://github.com/christopher3810/TIL/assets/61622657/0528dd89-ba9e-44b8-b867-6911ee02937e" width="400">
+
