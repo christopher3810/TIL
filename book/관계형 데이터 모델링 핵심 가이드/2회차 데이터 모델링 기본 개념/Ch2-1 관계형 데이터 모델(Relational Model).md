@@ -61,6 +61,9 @@ Employees (릴레이션 이름)
 
 릴레이션에는 `튜플의 개수를 카디널러티(Cardinality)`라고 하며 `어트리뷰트의 개수를 차수(Degree)`라고 한다.
 
+> 카디널리티에 대한 자세한 설명 [선택도 와 카디널리티](https://github.com/christopher3810/TIL/blob/master/Database/%EC%84%A0%ED%83%9D%EB%8F%84%EC%99%80%20%EC%B9%B4%EB%94%94%EB%84%90%EB%A6%AC%ED%8B%B0.md) 해당 링크 참조.
+
+
 `차수가 1개 이상이고 카디널러티가 0개 이상`이면 유효한 릴레이션이다.
 
 튜플을 흔히 `레코드(Record)`,` 로우(Row)`, `인스턴스(Instance)`라고도 부르며 
