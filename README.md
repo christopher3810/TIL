@@ -154,4 +154,5 @@ This repository is licensed under the MIT license
 ## Etc
 
 🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md) \
-💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/etc_hosts%20%2C%20local%20dns.md)
+💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/etc_hosts%20%2C%20local%20dns.md) \
+🤖   [Big O](https://github.com/christopher3810/TIL/blob/master/Etc/Big%20O.md)
