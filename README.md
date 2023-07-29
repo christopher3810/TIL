@@ -155,7 +155,6 @@ This repository is licensed under the MIT license
 🤖   [Big O](https://github.com/christopher3810/TIL/blob/master/Etc/Big%20O.md)
 
 ## Study With Book
----
 
 ### Clean Code
 
