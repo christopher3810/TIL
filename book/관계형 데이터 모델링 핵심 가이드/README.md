@@ -3,7 +3,7 @@
 
 ![Study](https://img.shields.io/badge/Study%20Status-Ongoing-blue) ![Book](https://img.shields.io/badge/Book-Core%20Guide%20to%20Relational%20Data%20Modeling-orange) ![Language](https://img.shields.io/badge/Language-SQL-yellowgreen) ![Database](https://img.shields.io/badge/Database-RDBMS-brightgreen)
 
-이 저장소는 [관계형 데이터 모델링 핵심 가이드]([관계형 데이터 모델링 프리미엄 가이드 | 김기창 - 교보문고 (kyobobook.co.kr)](https://product.kyobobook.co.kr/detail/S000001974817)) 책의 스터디를 위해 만들어진 공간입니다. 
+이 저장소는 [관계형 데이터 모델링 핵심 가이드](https://product.kyobobook.co.kr/detail/S000001974817) 책의 스터디를 위해 만들어진 공간입니다. 
 
 이곳에서는 책의 핵심 내용 요약, 추가적인 내용 기록, 그리고 책에서 다루지 않은 예제들을 통해 RDBMS 데이터 모델링에 대한 깊은 이해를 목표로 합니다.
 
