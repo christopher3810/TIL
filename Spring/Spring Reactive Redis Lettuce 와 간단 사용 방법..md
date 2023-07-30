@@ -118,5 +118,73 @@ sequenceDiagram
 
 이는 시스템의 확장성을 크게 향상시키며, 높은 트래픽의 환경에서 매우 유용.
 
-> WebFlux 를 사용하지 않고도 설정하면 비동기 Lettuce를 활용한 비동기 Redis를 사용할 수야 있지만.
-> WebFlux와 연동해서 Spring Data Reactive Redis 를 같이 사용하는게 편하게 구축 가능함.
+### In Spring
+
+Spring Data Reactive Redis를 의존성을 추가를 한뒤.
+
+Config 객체를 생성한다.
+
+```Java
+@Configuration
+public class RedisConfig {
+
+    @Value("${spring.redis.host}")
+    private String redisHost;
+
+    @Value("${spring.redis.port}")
+    private int redisPort;
+
+    @Bean
+    public LettuceConnectionFactory lettuceConnectionFactory() {
+        return new LettuceConnectionFactory(redisHost, redisPort);
+    }
+
+    @Bean
+    public ReactiveRedisTemplate<String, String> reactiveRedisTemplate(ReactiveRedisConnectionFactory factory) {
+        return new ReactiveRedisTemplate<>(factory, RedisSerializationContext.string());
+    }
+
+}
+```
+
+위와 같에 aplication.yml 기준으로 host 와 port 정보를 기반으로 `LettuceConnectionFactory`를 통해서 redis 와 연결 정보를 설정 할 수있다.
+
+```java
+LettuceConnectionFactory();
+```
+
+인자를 넘기지 않으면 defualt 값이 전달됨. 
+
+redis default port는 `6379`임
+
+```java
+ReactiveRedisTemplate<>(factory, RedisSerializationContext.string());
+```
+
+`ReactiveRedisTemplate` 에 넘겨주는 인자 두가지로 Redis와 비동기 연결을 위한 `LettuceConnectionFactory`,
+
+Redis 연산의 결과를 serialize/deserialize하는 방법을 정의한 `RedisSerializationContext`이 필요하다.
+
+model
+
+```java
+@RedisHash("books")
+public class Book {
+    @Id
+    private String id;
+    @Indexed
+    private String title;
+    private String author;
+}
+```
+
+redis용 model을 만든뒤 이제 연결된 Redis로 부터 다양한 연산 작업이 가능함.
+
+> 해당 방법은 ReactiveRedisTemplate을 활용한 간단한 Redis 연결및 연산작업 방법을 기록
+> RedisRepository를 활용한 방안이나 `ReactiveRedisTemplate` 클래스를 활용한 redis 연산에 관한 것은 별도의 TIL 글로 작성하겠음.
+
+
+
+
+
+
