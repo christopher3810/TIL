@@ -148,12 +148,22 @@ This repository is licensed under the MIT license
 🐱   [git submodule](https://github.com/christopher3810/TIL/blob/master/git/git%20submodule.md) \
 🐱   [git client side hook (commit workflow hook)](https://github.com/christopher3810/TIL/blob/master/git/git%20client%20side%20hook%20(commit%20workflow%20hook).md)
 
-## Study With Book
-📓   [읽기 좋은 코드가 좋은 코드다(The Art of Readable Code)](https://github.com/christopher3810/TIL/tree/master/book/%EC%9D%BD%EA%B8%B0%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EA%B0%80%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%8B%A4(The%20Art%20of%20Readable%20Code)) \
-📓   [관계형 데이터 모델링 핵심 가이드](https://github.com/christopher3810/TIL/tree/master/book/%EA%B4%80%EA%B3%84%ED%98%95%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%AA%A8%EB%8D%B8%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EA%B0%80%EC%9D%B4%EB%93%9C)
-
 ## Etc
 
 🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md) \
 💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/etc_hosts%20%2C%20local%20dns.md) \
 🤖   [Big O](https://github.com/christopher3810/TIL/blob/master/Etc/Big%20O.md)
+
+## Study With Book
+
+### Clean Code
+
+📓   [읽기 좋은 코드가 좋은 코드다(The Art of Readable Code)](https://github.com/christopher3810/TIL/tree/master/book/%EC%9D%BD%EA%B8%B0%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EA%B0%80%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%8B%A4(The%20Art%20of%20Readable%20Code))
+
+### Database
+
+📓   [관계형 데이터 모델링 핵심 가이드](https://github.com/christopher3810/TIL/tree/master/book/%EA%B4%80%EA%B3%84%ED%98%95%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%AA%A8%EB%8D%B8%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EA%B0%80%EC%9D%B4%EB%93%9C)
+
+### Programming Languages
+
+**Java**
