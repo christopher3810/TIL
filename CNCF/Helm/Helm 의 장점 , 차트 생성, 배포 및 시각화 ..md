@@ -59,15 +59,9 @@ Helm으로 새로운 프로젝트를 생성(`helm create`)하면, 아래와 같�
 
 `templates/`
 
-쿠버네티스 리소스 정의(YAML 파일)를 가지고 있는 폴더입니다. 이 폴더의 파일들은 `values.yaml` 파일의 값을 이용해 템플릿화됨.
+쿠버네티스 리소스 정의(YAML 파일)를 가지고 있는 폴더. 
 
-`templates/NOTES.txt`
-
-Helm 설치 후 출력되는 메시지를 담고 있는 파일.
-
-`.helmignore`
-
-`.gitignore`와 비슷한 역할.
+이 폴더의 파일들은 `values.yaml` 파일의 값을 이용해 템플릿화됨.
 
 ### values.yaml을 이용한 PostgreSQL 설정 예시
 ---
