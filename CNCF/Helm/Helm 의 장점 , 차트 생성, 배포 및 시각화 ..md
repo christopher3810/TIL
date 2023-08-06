@@ -63,6 +63,67 @@ Helm으로 새로운 프로젝트를 생성(`helm create`)하면, 아래와 같�
 
 이 폴더의 파일들은 `values.yaml` 파일의 값을 이용해 템플릿화됨.
 
+### Helm Repository 추가
+
+---
+
+Helm 차트는 여러 개의 공식 및 비공식 차트 저장소에서 사용할 수 있음. 
+
+Helm 저장소를 추가하려면 `helm repo add` 명령을 사용.
+
+예를 들어, Bitnami 차트 저장소를 추가하려면 다음과 같이 실행.
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami`
+```
+
+### Chart.yaml에 dependency 추가
+
+---
+
+Helm 차트는 다른 차트에 의존할 수 있음. 
+
+이 의존성은 `Chart.yaml` 파일 내에 `dependencies` 섹션을 통해 정의됨.
+
+예를 들어, PostgreSQL 차트에 대한 의존성을 추가하려면, `Chart.yaml` 파일에 다음과 같이 추가.
+
+```yaml
+dependencies:
+- name: postgresql
+  version: 10.3.11
+  repository: https://charts.bitnami.com/bitnami
+```
+
+### Dependency Update
+
+---
+
+`helm dependency update` 명령은 차트의 의존성 정보를 최신 상태로 업데이트. 
+
+이 명령은 차트의 의존성이 `charts/` 디렉토리에 다운로드되도록 함.
+
+```bash
+helm dependency update ./my-chart
+```
+
+`./my-chart` 위치의 차트에 정의된 의존성을 업데이트함.
+
+### Chart에서 사용하는 차트 버전 확인
+
+---
+
+`helm search repo` 명령을 사용하여 차트에서 사용하는 차트의 버전을 확인할 수 있음.
+
+예를 들어, Bitnami repository의 PostgreSQL 차트 버전을 확인하려면 다음과 같이 실행.
+
+```bash
+helm search repo bitnami/postgresql --versions
+```
+
+이 명령은 Bitnami repository의 PostgreSQL 차트의 모든 버전을 보여줌.
+
+이를 통해 `Chart.yaml`에 지정할 버전을 찾을 수 있음.
+
 ### values.yaml을 이용한 PostgreSQL 설정 예시
 ---
 
@@ -71,9 +132,6 @@ Helm으로 새로운 프로젝트를 생성(`helm create`)하면, 아래와 같�
 
 ```yaml
 postgresql:
-  image:
-    repository: postgres
-    tag: latest
   service:
     port: 5432
   persistence:
@@ -84,7 +142,7 @@ postgresql:
 
 ```
 
-이 설정은 PostgreSQL의 도커 이미지, 서비스 포트, 사용자 이름, 비밀번호, 그리고 영속성 설정 등을 정의. 
+서비스 포트, 사용자 이름, 비밀번호, 그리고 영속성 설정 등을 정의. 
 
 영속성을 사용하도록 설정하면, PostgreSQL 데이터가 파드가 삭제되어도 유지됨.
 
