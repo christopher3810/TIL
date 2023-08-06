@@ -145,6 +145,8 @@ X → Y → Z 와 같은 종속을 `이행 종속(Transitive Dependency)`이라 
 
 ### [[폐포(Closure)]]
 ---
+[폐포 , 클로저란?](https://github.com/christopher3810/TIL/blob/master/book/%EA%B4%80%EA%B3%84%ED%98%95%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%AA%A8%EB%8D%B8%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EA%B0%80%EC%9D%B4%EB%93%9C/4%ED%9A%8C%EC%B0%A8%20%EC%A0%95%EA%B7%9C%ED%99%94/%ED%8F%90%ED%8F%AC(Closure).md)
+
 >릴레이션 R의 속성 X가 키인지 아닌지 알려면 X의 폐포 즉 클로저를 알아야 한다. \
 >클로저에 대해서는 위 링크를 참조.
 
