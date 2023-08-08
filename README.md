@@ -11,10 +11,12 @@
 
 이 Git 저장소는 TIL(Today I Learned)을 기록하기 위해 만들어졌습니다.
 
-이 저장소는 주로 두가지 목적 으로 구성되어 있습니다.
+이 저장소는 주로 두가지 목적으로 구성되어 있습니다.
 
 1. [개발 블로그](https://colevelup.tistory.com/)에 게시되는 글보다는 간결하게 표현된 핵심 개념과 지식을 구조적으로 기록하는 공간입니다.
-2. 책을 활용한 스터디 자료를 기록하고 공유하는 공간입니다.
+2. 꾸준한 학습을 지향하나 Today 라는 단어에 사로잡혀 매일 매일 정보를 기록하기 위해 불필요 한 글은 작성하지 않습니다.
+
+>책을 활용한 스터디 자료를 기록하고 공유하는 공간은 별도의 [DevBookStudies]([christopher3810/DevBookStudies: Notes, insights, and personalized code from my tech book journey. (github.com)](https://github.com/christopher3810/DevBookStudies)) 레포지토리 가 존재하며 해당 레포지토리를 참고 해주시면 감사합니다. 
 
 TIL Repository는 지속적인 학습을 추구하고, 그 과정에서 얻은 지식을 공유하려는 목표를 가지고 있습니다. 
 
@@ -158,17 +160,3 @@ This repository is licensed under the MIT license
 🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md) \
 💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/etc_hosts%20%2C%20local%20dns.md) \
 🤖   [Big O](https://github.com/christopher3810/TIL/blob/master/Etc/Big%20O.md)
-
-## Study With Book
-
-### Clean Code
-
-📓   [읽기 좋은 코드가 좋은 코드다(The Art of Readable Code)](https://github.com/christopher3810/TIL/tree/master/book/%EC%9D%BD%EA%B8%B0%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EA%B0%80%20%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%8B%A4(The%20Art%20of%20Readable%20Code))
-
-### Database
-
-📓   [관계형 데이터 모델링 핵심 가이드](https://github.com/christopher3810/TIL/tree/master/book/%EA%B4%80%EA%B3%84%ED%98%95%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%AA%A8%EB%8D%B8%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EA%B0%80%EC%9D%B4%EB%93%9C)
-
-### Programming Languages
-
-**Java**
