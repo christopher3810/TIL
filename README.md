@@ -16,7 +16,7 @@
 1. [개발 블로그](https://colevelup.tistory.com/)에 게시되는 글보다는 간결하게 표현된 핵심 개념과 지식을 구조적으로 기록하는 공간입니다.
 2. 꾸준한 학습을 지향하나 Today 라는 단어에 사로잡혀 매일 매일 정보를 기록하기 위해 불필요 한 글은 작성하지 않습니다.
 
->책을 활용한 스터디 자료를 기록하고 공유하는 공간은 별도의 [DevBookStudies]([christopher3810/DevBookStudies: Notes, insights, and personalized code from my tech book journey. (github.com)](https://github.com/christopher3810/DevBookStudies)) 레포지토리 가 존재하며 해당 레포지토리를 참고 해주시면 감사합니다. 
+>책을 활용한 스터디 자료를 기록하고 공유하는 공간은 별도의 [DevBookStudies](https://github.com/christopher3810/DevBookStudies) 레포지토리 가 존재하며 해당 레포지토리를 참고 해주시면 감사합니다. 
 
 TIL Repository는 지속적인 학습을 추구하고, 그 과정에서 얻은 지식을 공유하려는 목표를 가지고 있습니다. 
 
