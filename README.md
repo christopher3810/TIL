@@ -42,7 +42,8 @@ This repository is licensed under the MIT license
 🌱   [Wrapper로 복잡한 Model 관리하기](https://github.com/christopher3810/TIL/blob/master/Spring/Wrapper%EB%A1%9C%20%EB%B3%B5%EC%9E%A1%ED%95%9C%20Model%20%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0.md) \
 🌱   [Mockito.mock() vs @Mock vs @MockBean & @Autowired vs @InjectionMock](https://github.com/christopher3810/TIL/blob/master/Spring/Mockito.mock()%20vs%20%40Mock%20vs%20%40MockBean%20%26%20%40Autowired%20vs%20%40InjectionMock.md) \
 🌱   [SLF4J의 Placeholder 와 log 생성 최적화 방안 고민](https://github.com/christopher3810/TIL/blob/master/Spring/SLF4J%EC%9D%98%20Placeholder%20%EC%99%80%20log%20%EC%83%9D%EC%84%B1%20%EC%B5%9C%EC%A0%81%ED%99%94%20%EB%B0%A9%EC%95%88%20%EA%B3%A0%EB%AF%BC.md) \
-🌱   [Spring Reactive Redis Lettuce 와 간단 사용 방법](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20Reactive%20Redis%20Lettuce%20%EC%99%80%20%EA%B0%84%EB%8B%A8%20%EC%82%AC%EC%9A%A9%20%EB%B0%A9%EB%B2%95..md)
+🌱   [Spring Reactive Redis Lettuce 와 간단 사용 방법](https://github.com/christopher3810/TIL/blob/master/Spring/Spring%20Reactive%20Redis%20Lettuce%20%EC%99%80%20%EA%B0%84%EB%8B%A8%20%EC%82%AC%EC%9A%A9%20%EB%B0%A9%EB%B2%95..md) \
+🌱   [좋은 예외 처리 방법](https://github.com/christopher3810/TIL/blob/master/Spring/%EC%A2%8B%EC%9D%80%20%EC%98%88%EC%99%B8%20(Exception)%20%EC%B2%98%EB%A6%AC.md)
 
 ## JPA
 🗂️   [JPA lock(낙관적, 비관적)](https://github.com/christopher3810/TIL/blob/master/JPA/JPA%20lock(%EB%82%99%EA%B4%80%EC%A0%81%2C%20%EB%B9%84%EA%B4%80%EC%A0%81).md) \
