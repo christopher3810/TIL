@@ -164,4 +164,4 @@ This repository is licensed under the MIT license
 🤖   [GPT-4](https://github.com/christopher3810/TIL/blob/master/Etc/ChatGPT-4.md) \
 💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/etc_hosts%20%2C%20local%20dns.md) \
 🤖   [Big O](https://github.com/christopher3810/TIL/blob/master/Etc/Big%20O.md) \
-💡    [etc_hosts , local dns](https://github.com/christopher3810/TIL/blob/master/Etc/MSA%EB%A1%9C%EC%9D%98%20%EC%A0%84%ED%99%98%EC%9D%98%20%EA%B4%80%ED%95%9C%20%EA%B3%A0%EC%B0%B0(Jason%20Warner%20-%20%20Github%20CTO).md)
+💡    [MSA로의 전환의 관한 고찰(Jason Warner - Github CTO)](https://github.com/christopher3810/TIL/blob/master/Etc/MSA%EB%A1%9C%EC%9D%98%20%EC%A0%84%ED%99%98%EC%9D%98%20%EA%B4%80%ED%95%9C%20%EA%B3%A0%EC%B0%B0(Jason%20Warner%20-%20%20Github%20CTO).md)
