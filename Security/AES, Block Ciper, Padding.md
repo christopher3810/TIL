@@ -79,7 +79,7 @@ CBC(Cipher Block Chaining) 모드는 **initialization vector** (IV)를 사용하
 
 이 모드는 CBC와 유사하므로 블록이 깨지면 다음 블록에 모두 영향을 미침.
 
->[!WARNING ]
+>[!WARNING]
 >CFB 모드는 replay attack에 취약함. \
 >이는 CFB가 각 블록의 암호화에 이전 블록의 암호문을 사용하기 때문. \
 >공격자가 암호문의 순서를 변경하거나 재전송함으로써 수신자는 변경된 암호문을 받고, 이를 정상적인 메시지로 잘못 해석할 수 있음. \
