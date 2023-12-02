@@ -161,7 +161,7 @@ This repository is licensed under the MIT license
 
 ## Security
 
-🔑   [AES, Block Ciper, Padding](https://github.com/christopher3810/TIL/blob/master/Security/AES%2C%20Block%20Ciper%2C%20Padding.md) \
+🔑   [AES, Block Ciper, Padding](https://github.com/christopher3810/TIL/blob/master/Security/AES%2C%20Block%20Ciper%2C%20Padding.md)
 
 ## Etc
 
