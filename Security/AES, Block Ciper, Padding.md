@@ -22,7 +22,7 @@
 >AES 암호화는 고정된 크기의 데이터 블록을 처리하는데, 이때 평문 데이터의 길이가 블록 크기와 일치하지 않을 경우 패딩이 필요합니다. \
 >패딩은 데이터 블록을 채워 고정된 길이를 유지하는 방식으로, PKCS#7 같은 표준 패딩 방식을 사용하여 블록을 채웁니다.
 
-#### ECB
+#### ECB(Electronic Code Block)
 
 ![ECB](https://github.com/christopher3810/TIL/assets/61622657/b08a7a75-b3ac-49e3-9f86-37f6ca38d7d8)
 
@@ -34,7 +34,7 @@ ECB(Electronic Code Book)는 가장 간단한 AES 암호화 모드.
 
 ECB 모드는 병렬 처리가 가능하나, 고유한 보안 취약점 때문에 일반적으로 권장되지 않음.
 
-#### CBC
+#### CBC (Cipher Block Chaining)
 
 ![CBC](https://github.com/christopher3810/TIL/assets/61622657/937af214-0e53-4f8c-b777-156396f6e38c)
 
@@ -98,6 +98,7 @@ CBC(Cipher Block Chaining) 모드는 **initialization vector** (IV)를 사용하
 
 왜 **2^((n+1)/2) 암호화 블록**마다 일까?
 
+#### Birthday Paradox
 
 >[!NOTE]
 > Birthday Paradox. \
@@ -105,7 +106,9 @@ CBC(Cipher Block Chaining) 모드는 **initialization vector** (IV)를 사용하
 >실제로는 23명만 모여도 생일이 같은 두 사람이 있을 확률이 50%를 넘고, 57명이 모이면 99%를 넘어간다 .\
 >이 문제는 무작위로 만난 366명의 생일이 서로 겹치지 않고 고르게 분포할 확률이 사실상 없다는 점을 나타낸다.
 
-즉 [암호학적 해시 결과](https://ko.wikipedia.org/wiki/%EC%95%94%ED%98%B8%ED%95%99%EC%A0%81_%ED%95%B4%EC%8B%9C_%ED%95%A8%EC%88%98 "암호학적 해시 함수")가 같은([해시 충돌](https://ko.wikipedia.org/wiki/%ED%95%B4%EC%8B%9C_%EC%B6%A9%EB%8F%8C "해시 충돌")) 두 입력값을 찾는 것 역시 모든 입력값을 계산하지 않아도 충분히 높은 확률로 해시 충돌을 찾을 수 있다.
+#### 암호화 해시 충돌도 역시 같을까?
+
+ [암호학적 해시 결과](https://ko.wikipedia.org/wiki/%EC%95%94%ED%98%B8%ED%95%99%EC%A0%81_%ED%95%B4%EC%8B%9C_%ED%95%A8%EC%88%98 "암호학적 해시 함수")가 같은([해시 충돌](https://ko.wikipedia.org/wiki/%ED%95%B4%EC%8B%9C_%EC%B6%A9%EB%8F%8C "해시 충돌")) 두 입력값을 찾는 것 역시 모든 입력값을 계산하지 않아도 충분히 높은 확률로 해시 충돌을 찾을 수 있다.
 
 `n` 비트 값은 이진수로 표현될 때 `n` 자리를 가지며, 각 자리는 0 또는 1 중 하나의 값을 가질 수 있음.
 
@@ -133,15 +136,43 @@ CBC(Cipher Block Chaining) 모드는 **initialization vector** (IV)를 사용하
 
 따라서, `2^(n/2)`보다 더 작은 값에서 키를 변경하는 것이 보다 안전하다고 간주됩니다. `2^((n+1)/2)`는 `2^(n/2)`보다 약간 큰 값이며, 이를 통해 추가적인 보안 마진을 확보하게 됨.
 
+2^(n+1/2) 암호화 블록마다 키를 변경해야 합니다.
 
-#### OFB
+#### OFB(Output FeedBack)
 
 ![OFB](https://github.com/christopher3810/TIL/assets/61622657/210c271a-e5f6-402b-b6ed-6a03ea7e73f7)
 
-#### CTR
+OFB모드에서는 평문 블록은 암호 알고리즘에 의해 직접 암호화되고 있는 것이 아니라 평문블록과 암호 알고리즘의 출력을 XOR해서 암호문 블록을 만들어 냄.(물론 맨처음엔 IV를 활용해서 암호화 함.)
+
+
+>[!NOTE]
+>**스트림 암호화**: OFB 모드는 블록 암호를 스트림 암호화기처럼 사용하게 만들어, 데이터를 비트나 바이트 단위로 암호화 및 복호화함. \
+>이 스트림은 평문의 길이에 맞춰서 연속적으로 생성되므로, 평문의 길이가 블록 크기의 배수가 아니어도 문제가 되지 않음. \
+>생성된 키 스트림은 평문과 XOR 연산되어 암호문을 생성. 
+>이 과정에서 평문의 길이에 따라 키 스트림의 필요한 부분만 사용되므로, 블록 크기에 맞춰서 데이터를 채울 필요가 없음. \
+>즉 패딩이 필요하지 않음.
+
+
+OFB 모드는 CPA (Chosen Plaintext Attack)에는 안전하지만, CCA (Chosen Ciphertext Attack)와 PA (Plaintext Attack)에 취약할 수 있음.
+
+특히, 암호문의 일부를 변경하면 평문도 동일한 방식으로 변경되는 특성 때문에 Mallory attack(암호문 조작)에 취약.
+
+2^(n+1/2) 암호화 블록마다 키를 변경해야 함.
+
+#### CTR(Counter)
 
 ![CTR](https://github.com/christopher3810/TIL/assets/61622657/a8bd0da4-cad5-48be-aeb2-9cbed6092db5) 
 
+
+CTR 모드에서는 Encrypt에 대한 입력 블록, 즉 IV로 Counter 값(Counter, Counter + 1,..., Counter + N - 1)이 사용됨
+
+OFB와 매우 유사하지만 CTR은 IV 대신 매번 암호화할 카운터를 사용함.
+
+따라서 카운터를 직접 얻을 수 있다면 데이터를 병렬로 암호화/복호화할 수 있음.
+
+Mallory(공격자) 는 암호문의 일부 비트를 변경하여 평문을 깨뜨릴 수 있음.
+
+2^(n+1/2) 암호화 블록마다 키를 변경해야 함.
 
 <b>Summary</b>
 
