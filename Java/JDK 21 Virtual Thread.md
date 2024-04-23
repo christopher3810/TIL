@@ -1,10 +1,12 @@
 #### Virtual Thread?
 ---
 
-> [!info]
+> [!note]
 > JDK 21(LTS)에 추가된 경량 스레드
 > OS 스레드를 그대로 사용하지 않고 JVM 내부 스케줄링을 통해서 
 > 수십 ~ 수백만개의 스레드를 동시에 사용 할 수 있게 한다.
+
+Java Project Room 은 무엇인가 이런걸 연계로 알 필요가 있음.
 
 #### 탄생 배경
 ---
@@ -13,9 +15,26 @@ Java의 Thread는 OS Thread를 Wrapping 한것 (Platform Thread)
 
 Java 애플리케이션에서 Thread를 사용하면 실제로 OS Thread를 사용한 것
 
-OS Thread는 생성 갯수가 제한적이고, 생성 유지하는 비용이 비싸다.
+OS Thread는 생성 갯수가 제한적이고, 생성 유지하는 비용이 비싸기 때문에 효율적인 관리가 필요함.
+
+>[!Note]
+> OS Thread 의 유지 비용
+> 1. 시스템 자원 : cpu 시간, 메모리 등
+> 2. 컨텍스트 스위칭 : 스레드간 컨텍스트 스위칭, 스레드 상태저장, 다른 스레드 상태 불러오는 과정 포함. 해당 과정에서 생기는 오버헤드
+> 3. 생성 및 관리 : 스레드 생성, 소멸, 스케쥴링
+> 4. 스레드가 많을 수록 스케줄링이 힘듬
+> 
+> 효율적으로 사용하기 위해 Java가 선택한 Thread Pool
+> 1. 재사용 : 스레드는 작업이 종료된 이후에도 재사용 가능. (생산, 소멸에 쓰이는 자원 감소)
+> 2. 리소스 사용 최적화 : 스레드 최대 갯수를 제한함으로서 자원 사용 최적화 및 시스템 안정성 도모.
+> 3. 부하 관리 : task 를 queue를 활용해서 사용, spike 튀는 것을 어느정도 방지 가능
+> 4. 
+
 
 (무한히 늘릴 수 없음)
+
+/// 왜그럴지 생각 해보기
+/// 스레드 풀을 생성해서 좀 효율적으로 사용하기 위해서 활용해 왔었음.
 
 이 때문에 애플리케이션에서는 platform thread를 효율적으로 사용하기 위해 ThreadPool을 사용한다.
 
@@ -23,6 +42,33 @@ OS Thread는 생성 갯수가 제한적이고, 생성 유지하는 비용이 비
 flowchart LR
 Application --> ThreadPool_PlatformThread
 ThreadPool_PlatformThread --> OS_OS_Thread
+```
+
+threadpool 과 forkjoin pool 의 측면에서 보면 아래와 같음.
+
+```mermaid
+sequenceDiagram
+    participant App as Java Application
+    participant JVM as Java Virtual Machine
+    participant ThreadPool as Thread Pool
+    participant ForkJoin as ForkJoinPool
+    participant OSThread as OS Thread
+
+    App->>+JVM: Start Application
+    JVM->>+ThreadPool: Request Thread Execution
+    ThreadPool->>+OSThread: Allocate Thread
+    Note over OSThread: OS-level Thread Execution
+    OSThread-->>-ThreadPool: Executes Task
+    ThreadPool-->>-JVM: Task Completion
+
+    JVM->>+ForkJoin: Request Fork/Join Task
+    ForkJoin->>+OSThread: Fork Tasks
+    Note over OSThread: Parallel Execution
+    OSThread-->>-ForkJoin: Joins Tasks
+    ForkJoin-->>-JVM: Task Completion
+
+    JVM->>App: Returns Control
+    Note over App: Application Logic Execution
 ```
 
 이러다 보니까
@@ -102,3 +148,26 @@ Thread를 extend 하고 있기 때문에 Thread에서 사용하던 메서드를 
 #### Platform Thread
 ---
 
+
+
+
+
+
+
+
+### 참조
+---
+[오라클 VirtualThread](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)
+
+[VirtualThread](https://perfectacle.github.io/2022/12/29/look-over-java-virtual-threads/)
+
+
+### 추가 확인 쟁점
+---
+
+Resiliance4j 에서의 bulkhead thread pool이 존재하는데
+Virtual thread 와 어떻게 연동되어서 사용될 수 있는지도 주요 쟁점임.
+
+Virtual thread가 low level 이라서 debugg 나 following이 힘들다는 단점이 있는가?
+Netty는 Virtual thread에 비해서 monitoring 하기가 조금더 수월한 편인가?
+with loki
