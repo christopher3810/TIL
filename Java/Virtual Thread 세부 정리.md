@@ -499,12 +499,264 @@ blocking 시점에서 virtualthread를 사용하고 있다면 continuation 의 y
 ### 기존 스레드 모델 서버 비교
 ---
 
+Thread Per Request Model 을 가정한다.
+
+Platform Thread가 두가지인 경우
+
+Request가 2개라면
+
+PlatformThread가 2개이고
+
+osKernal Threadrk 2ro
+
+```mermaid
+flowchart LR
+Request1 --> Platform1
+Request2 --> Platform2
+Platform1 --> Kernal1
+Platform2 --> Kernal2
+```
+
+
+```mermaid
+flowchart LR
+Request1 --> Platform1
+Request2 --> Platform2
+Platform1 --> Kernal1
+Platform2 --park--> Kernal2
+
+Platform2 --IO_Blocking--> DB
+```
+
+IO Blocking을 만나면 park 호출
+이때 세번째 Request가 들어오면 대기타고있음.
+
+IO Blocking이 완료되고 Response가 나가면 세번째 Request가 스레드를 할당받고 진행됨.
+
+```java
+@Configuration
+public class ThreadConfig {
+
+	@Bean
+	public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer(){
+		return protocolHandler -> {
+			protocolHandler.setExecutor(Executors.newVirtualThreadPerTaskExecutor());
+		}
+	}
+
+}
+```
+
+Virtual Thread로 동작하도로 변경.
+
+```mermaid
+flowchart LR
+Request1 --> Virtual1
+Request2 --> Virtual2
+Virtual1 --> Carrier1
+Virtual2 --> Carrier2
+Carrier1 --> Kernal1
+Carrier2 --> Kernal2
+```
+
+```mermaid
+flowchart LR
+Request1 --> Virtual1
+Request2 --> Virtual2
+Virtual1 --> Carrier1
+Virtual2 --park--> Carrier2_yield_스케줄링
+Carrier1 --> Kernal1
+Carrier2_yield_스케줄링 --> Kernal2
+Virtual2 --IO_Blocking-->DB
+```
+Continuation을 yield하고 재스케줄링을 하게됨.
+
+```mermaid
+flowchart LR
+Request1 --> Virtual1
+Request2 --> Virtual2
+Virtual1 --> Carrier1
+Virtual2 <--분리된상태--> Carrier2_yield_스케줄링
+Carrier1 --> Kernal1
+Carrier2_yield_스케줄링 --> Kernal2
+Virtual2 --IO_Blocking-->DB
+```
+분리가 되고 다음 스케줄링을 기다리게됨.
+
+세번째 Request가 들어오게 되면 세번 째 Virtual Thread를 만들게됨.
+
+```mermaid
+flowchart LR
+Request1 --> Virtual1
+Request2 --> Virtual2
+Request3 --> Virtual3
+Virtual1 --> Carrier1
+Virtual2 <--분리된상태--> Carrier2
+Carrier1 --> Kernal1
+Carrier2 --> Kernal2
+Virtual2 --IO_Blocking-->DB
+Virtual3 --> Carrier2
+```
+스케줄러에 의해서 두번째 carrier 스레드에 등록되서 요청 처리 가능.
+
+IO Blocking 을 완료하고 첫번째 Request가 완료되면.
+
+```mermaid
+flowchart LR
+Request2 --> Virtual2
+Request3 --> Virtual3
+Virtual2 --> Carrier1
+Carrier1 --> Kernal1
+Virtual2 --Blocking끝-->DB
+Virtual3 --> Carrier2
+```
+
+두번 째 Request의 Virtual2가 Io blocking이 끝나면 첫번 째 Carrier thread를 할당받아서 사용함.
+
+Continuation + JDK 라이브러리 리팩터링 = NonBlocking
+
 ### 성능 테스트
 ---
 
+Thread vs VirtualThread
+
+AWS EC2
+- 1 core CPU
+- 1GB RAM
+
+Spring MVC
+JVM Heap 256MB
+ngrinder
+- vUser : 200
+
+I/O Bound / CPU Bound
+- API 호출
+- CPU 연산
+
+I/O Bound 51% 더 높은 성능 TPS
+CPU Bound 7% 더 낮은 성능
+
+일반 Thread 방식에 비해
+- I/O Bound 더 높음
+- CPU Bound VirtualThread 생성, 스케줄링 하는 비용때문에 더 낮음 결국 플랫폼 스레드 위에서 돌아가야 하기 때문.
+
+Thread서버는 특정 vuser수 부터 장애 발생 
+즉 최대 처리량은 일반 Therad 모델이 낮다.
+
+WebFlux vs Virtual Thread
+
+AWS EC2
+- 1 core CPU
+- 1GB RAM
+
+Spring MVC
+JVM Heap 256MB
+ngrinder
+- vUser : 500
+
+I/O Bound
+- API 호출
+
+WebFlux 컨텍스트 스위칭 비용임.
+
+장비 사양이 낮고 메모리 가 낮아서 극단적인 결과가 나타남. 211%
+극한상황;;
+이정도로 차이 나지 않음.
+
+> I/O Bound 작업 효율에서 성능 이점.
+> 제한된 사양에서 최대 처리량.
 
 ### 서비스 적용 시 주의사항
 ---
 
+1. Carrier thread 가 Blocking 되는 현상 pin 현상
+
+캐리어 스레드를 block하면 Virtual Thread 활용 불가
+- synchronized
+- parallelStream
+위 상황에 경우 VirtualThread가 Carrier Thread로 부터 분리가 안됨 그래서 Pin 현상
+
+VM Option으로 감지 가능
+- -Djdk.tracePinnedThreads = short,full
+
+mongodb, spring은 ReenteranceLock 바꾸면 개선이 가능.
+mysql은 synchronized가 많이 사용되고 있어서 pin 이슈가 생성될 수 있음.
+
+병목 가능성이 존재
+사용 라이브러리 release 점검
+변경 가능하다면 java.utill ReentrantLock으로 변경해서 사용.
+
+2. No Pooling
+	- 생성 비용이 저렴
+	- 사용 할때마다 생성
+	- 사용완료 후 GC
+
+```java
+// the Executor is unbounded
+public static ExecugtorService newVirtualThreadPerTaskExecutor(){
+
+}
+```
+
+executor service도 무제한 생성하도록 되어 있음.
+
+3. CPU Bound Task
+	- 결국 Carrier Thread 위에서 동작하므로 성능 낭비
+	- nonBlocking 장점 활용 불가
+
+4. 경량 스레드
+	- 수백만개의 스레드 생성 컨셉
+	- Thread Local 을 최대한 가볍게 유지
+	- 쉽게 생성 쉽게 소멸
+	- JDK21 previedw ScopedValue
+			스레드 로컬 대체 하는 ..
+
+
+5. 배압 back Pressure
+	- 배압 조절 기능이 없음
+	- 무제한으로 생성해서 무제한으로 처리하기 때문에 서버가 갖고있는 최대치를 내려고 노력
+	  하드웨어 성능이 부족할 수 있음.
+	- 유한 리소스 경우 배압 조절 해야 함 (DB 커넥션(커넥션 부족할 수 있음))
+	- 충분한 성능 테스트 필요.
+
+
+### 결론
+---
+
+Virtual Thread는 가볍고 빠르고 nonBlocking 인 경량 스레드
+Virtual Thread는 JVM 스케줄링 + Continuation
+Thread per request 사용중이고 , I/O blocking 이 주된 병목
+쉽게 적용 가능
+- Reactive가 러닝커브
+- kotlin coroutine이 러닝커브로 부담.
+
 ### Q&A
 ---
+
+1.  vs Coroutin
+
+Virtual Thread는 결국 Thread고 Coroutin은 결국 Routine 메서드의 대기 시간을 어떻게 줄이느냐.
+근본적인 패러다임이 다름
+Thread Per Request 의 속도를 어떻게 줄이느냐 스레드단위로 쪼개서
+Coroutine의 경우 메서드 단위로 속도를 어떻게 줄이느냐 메서드 단위로 쪼개서
+코틀린의 경우 좀더 나은 동시성을 지원.
+
+특정 코루틴 종료나 켄슬이 가능한데 그와 같이 아직 구조화된 것을 지원하진 않음.
+
+2.  vs WebFlux
+함수형 프로그래밍 지원, 배압 지원
+배압 조절이 지원하고, 함수형 프로그래밍을 적용해놓은 프로그램에서는 더나음.
+
+3. DB Connection Pool
+Java에서 권장하는건 세마포어를 통해 앞단에서 배압조절을 하고 뒷단에 요청을 흘려보냄
+딜레이거 걸려서 excception이 걸리면 application 코드를 활용하자.
+
+4. R2DBC
+VirtualThread MySQL JDBC Driver 
+MYSQL 올라온 PR이 있는데 그거 Merge만 되도 사용은 가능.
+
+5. Thread Local의 활용
+ CarrierThread에 ThreadLocal을 담아놨다 사용하면 사용가능.
+
+6. 메모리 관리에 있어서 여러 작업 스케줄링시 JVM GC 메모리 관리
+ VirtualThread 무제한 생성시 리소스 먹으니 적절한 배압 조절이 필요하다.
