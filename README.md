@@ -87,12 +87,15 @@ This repository is licensed under the MIT license
 🐘   [PostgreSQL 테이블 구조 재생성을 위한 SQL 추출하기](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/PostgreSQL%20%ED%85%8C%EC%9D%B4%EB%B8%94%20%EA%B5%AC%EC%A1%B0%20%EC%9E%AC%EC%83%9D%EC%84%B1%EC%9D%84%20%EC%9C%84%ED%95%9C%20SQL%20%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0.md) \
 🐘   [Postgres table 을 json Data로 변환 및 Json 파일로 저장](https://github.com/christopher3810/TIL/blob/master/Database/PostgreSQL/Postgres%20table%20%EC%9D%84%20json%20Data%EB%A1%9C%20%EB%B3%80%ED%99%98%20%EB%B0%8F%20Json%20%ED%8C%8C%EC%9D%BC%EB%A1%9C%20%EC%A0%80%EC%9E%A5.md)
 
+### MYSQL
+🐬   [Delete Query SubQuery Dependent subquery 시간 지연](https://github.com/christopher3810/TIL/blob/master/Database/MySQL/Delete%20Query%20SubQuery%20Dependent%20subquery%20%EC%8B%9C%EA%B0%84%20%EC%A7%80%EC%97%B0..md)
 
 ### Mongo DB
 
 🍃   [MongoDB Basic](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Basic.md)\
 🍃   [MongoDB Data Modeling](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Data%20Modeling.md)\
 🍃   [MongoDB Modeling Pattern](https://github.com/christopher3810/TIL/blob/master/Database/MongoDB/MongoDB%20Modeling%20Pattern.md)
+
 ### Redis
 
 🔴   [Redis Collections](https://github.com/christopher3810/TIL/blob/master/Database/Redis/Redis%20Collections.md)
