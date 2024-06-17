@@ -2,7 +2,7 @@
 데이터를 이동시키는 작업에 더 적은 노력을 들일수록 핵심 비즈니스에 더욱 집중할 수 있다.
 데이터를 어떻게 이동시키느냐의 문제는 데이터 그 자체만큼이나 중요한 것이다.
 
-### 왜 이름이 카프카 일까?
+### 왜 이름이 카프카?
 
 >Confluent 공동 창업자 Jay Kreps는 
 >Kafka 라는 소프트웨어가 write 작업에 최적화 되어 있기 때문에 작가 이름을 사용하는 것이 옳다고 판단,
@@ -136,60 +136,6 @@ graph TD
 Publisher - Subscriber
 
 
-```mermaid
-graph TD
-    subgraph Servers
-        S1[Server 1]
-        S2[Server 2]
-        S3[Server 3]
-        S4[Server 4]
-        S5[Server 5]
-    end
-
-    subgraph MetricServers
-        M1[Metric Server 1]
-        M2[Metric Server 2]
-    end
-
-    subgraph OtherServices
-        OS1[Service A]
-        OS2[Service B]
-        OS3[Service C]
-        OS4[Service D]
-        OS5[Service E]
-    end
-
-    subgraph IPCChannel
-        IPC[IPC Channel]
-    end
-
-    %% Connections between servers and IPC channel
-    S1 -- "Send Metric 1, 2" --> IPC
-    S2 -- "Send Metric 3, 4" --> IPC
-    S3 -- "Send Metric 5" --> IPC
-    S4 -- "Send Metric 6" --> IPC
-    S5 -- "Send Metric 7, 8" --> IPC
-
-    %% Metric servers receiving data from IPC channel
-    IPC -- "Receive Metrics" --> M1
-    IPC -- "Receive Metrics" --> M2
-
-    %% Additional connections from other services to servers
-    OS1 -- "Function X" --> S1
-    OS2 -- "Function Y" --> S2
-    OS3 -- "Function Z" --> S3
-    OS4 -- "Function W" --> S4
-    OS5 -- "Function V" --> S5
-
-```
-Sender - Receiver
-
->IPC Channel 을 쓰지 않고 Message Queue를 사용했을때 얻 을 수 있는 장점?
-
-
-
-
->그렇다면 Message Queue를 사용해야 하는걸 알았는데
 >추가 적으로 Message 처리 해야 하는 상황이 늘어 난다면?
 >결국 복잡해지는것 아닌가요?
 
@@ -309,8 +255,50 @@ graph TD
 3. 수많은 각기 다른 데이터는 어떻게 관리 해야 하는가?
 
 
->[!info]
+>[!Note]
 >데이터를 일반화 하여 중앙 집권 화 하여 관리하는 방식을 고려해 볼 수 있습니다. 
+
+Kafka Cluster 내에서 Broker들을 관리하는 방식으로 접근 가능합니다.
+데이터는 Topic 이라는 방식으로 일반화 되어 Consumer들이 소비하게 됩니다.
+
+![kafka_cluster](https://github.com/christopher3810/TIL/assets/61622657/3a2dfea3-9f4f-4d91-842c-3a4be14247ed)
+
+
+Kafka는 infomation 의 Producer와 information 의 Consumer 간의 원활한 통합을 제공하는 솔루션 중 하나로, information 의 Producer를 차단하지 않으면서도 Producer가 최종 Consumer 가 누구인지 알 필요 없이 작동합니다.
+
+Cluster 와 내부 Broker 구조를 가리고 보면 하나의 데이터 Back Bone으로도 볼 수 있습니다.
+
+
+**왜 Kafka는 Zookeeper 라는 별도의 Server 가 필요 한 걸까?** 
+
+Kafka는 기본적으로 분산 처리 시스템.
+
+1. **Cluster membership** : kafka Cluster 내에서 어떤 Broker 가 살고 죽는지를 알 필요가 있습니다.
+2. **Electing a controller** : 컨트롤러 선출하기(파티션의 리더/팔로워 관계를 유지하는 역할을 담당)
+3. Topic Management :  어떤 토픽이 있는지, 각각 몇 개의 파티션이 있는지, 복제본은 어디에 있는지
+
+#### Topic?
+
+Kafka에서 토픽은 데이터를 카테고리별로 나누어 관리하기 위한 논리적 단위입니다.
+Kafka는 데이터를 디스크에 저장할 때 각 토픽과 그 파티션을 디렉토리 구조로 관리합니다.
+즉 Topic은 Message, Event를 관리하는 일종의 폴더 입니다.
+
+
+#### Partition
+
+분산처리 시스템인 kafka에서 생성한 topic이 클러스터 내에서 하나의 machine, 또는 하나의 node에서만 사용된다면??
+
+**topic이 배포할 수 있는 cluster내에 작동하는 node의 개수보다 많아질 수 없기 때문에 Kafka를 스케일링하는 것에 대한 근본적인 한계로 작용할 수 있습니다.**
+
+병렬 처리, 대규모 메시지 처리를 할 수 있도록 **토픽 하나를 여러 개로 나눈 것이 파티션**이라고 합니다.
+
+#### Segment?
+
+Producer에 의해서 브로커로 전송된 메시지는 토픽의 파티션에 저장되며, **각 메시지들은 세그먼트라는 로그 파일의 형태로 브로커의 로컬 디스크에 저장됩니다.**
+각 partition 마다 n개의 segment들이 존재합니다.
+
+![스크린샷 2024-06-17 오후 11 36 08](https://github.com/christopher3810/TIL/assets/61622657/7e976104-c3be-4a80-ae6c-ff21117594f3)
+
 
 ### 카프카를 활용할 수 있는 방안 
 ---
@@ -333,20 +321,11 @@ Event를 push 해줄 수 있음.
 
 3. 실시간 스트리밍 데이터 처리
 
-### 간단하게 보는 Message Queue 구조
+
+#### [Kafka Need No Keeper](https://confluent.io/ko-kr/blog/removing-zookeeper-dependency-in-kafka/) Kafka는 더이상 Zookeeper를 사용하지 않습니다.
 ---
 
-#### Topic
+Kafka 3.7 이 Zookeeper를 사용하는 마지막 버전.
+Kafka 4.0 부터 [Kraft](https://developer.confluent.io/learn/kraft/) 를 활용하기 시작.
 
-
-### 현재 존재하는 Message Queue 들의 차이점
----
-
->Redis는 pub/sub 기반의 Message Queue로 활용이 가능 할까?
-
-
->RebbitMQ 는 영속성이 정말로 보장이 안될까?
-
-
-> Kafka는 위 경쟁 재품들과 다른 어떤 메리트를 갖고 있는가?
-
+[그럼에도 왜 Kafka 는 동물원을 탈출 했을까?](https://www.confluent.io/blog/why-replace-zookeeper-with-kafka-raft-the-log-of-all-logs/)
